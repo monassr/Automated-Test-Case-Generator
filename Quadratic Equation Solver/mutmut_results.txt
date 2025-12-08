@@ -1,0 +1,9 @@
+    Solver.x_solve_quadratic__mutmut_10: survived
+    Solver.x_solve_quadratic__mutmut_11: survived
+    Solver.x_solve_quadratic__mutmut_12: survived
+    Solver.x_solve_quadratic__mutmut_13: survived
+    Solver.x_solve_quadratic__mutmut_14: survived
+    Solver.x_solve_quadratic__mutmut_15: survived
+    Solver.x_solve_quadratic__mutmut_68: survived
+    Solver.x_solve_quadratic__mutmut_70: survived
+    Solver.x_solve_quadratic__mutmut_71: survived
