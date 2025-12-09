@@ -1,0 +1,45 @@
+bash
+# === SETUP ===
+pip install -r requirements.txt
+
+first change directory to include the project
+cd DateConverterValidation
+
+# === GENERATE ===
+python Generators/Generate_Base_Test_Set.py
+python Generators/Generate_Category_Partition_Test_Set.py
+python Generators/Generate_Pair_Wise_Test_Set.py
+python Generators/Generate_Metamorphic_Test_Set.py
+
+# === TEST ===
+pytest tests/ -v                                      # All tests
+pytest tests/test_Base.py -v                          # Specific test
+pytest tests/test_category_partition.py -v
+pytest tests/test_pairwise.py -v
+pytest tests/test_metamorphic.py -v
+pytest tests/ -k "leap"                               # Tests matching pattern
+
+# === COVERAGE ===
+pytest tests/ --cov=DateConverter --cov-report=html   # HTML report
+pytest tests/ --cov=DateConverter --cov-report=term   # Terminal
+coverage report -m                                    # Show missing lines
+
+# === MUTATION ===
+mutmut run --paths-to-mutate=DateConverter.py        # Run mutations
+mutmut results                                        # View summary
+mutmut show survived                                  # Show gaps
+mutmut show 5                                         # Specific mutant
+mutmut html                                           # HTML report
+Measure-Command { mutmut run --paths-to-mutate=DateConverter.py } # Measure mutmut execution time
+Measure-Command { mutmut run --paths-to-mutate=tests/test_pairwise.py}
+
+
+# === ANALYSIS ===
+python collect_metrics_for_report.py                  # Collect all metrics
+python run_all_tests_with_analysis.py                 # Full analysis
+
+# === TIMING ===
+time pytest tests/test_Base.py -q                     # Measure time
+pytest tests/ --durations=10                          # Slowest tests
+
+

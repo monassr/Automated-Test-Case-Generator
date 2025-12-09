@@ -1,0 +1,88 @@
+test_id,mr_type,seed_input,seed_format,step1_format,step2_format,expected_property,description
+MR1_001,Round-trip,2024-12-07,D_YYYYMMDD,S_DDMMYYYY,D_YYYYMMDD,Final equals seed,2024-12-07 through S_DDMMYYYY and back
+MR1_002,Round-trip,07/12/2024,S_DDMMYYYY,D_YYYYMMDD,S_DDMMYYYY,Final equals seed,07/12/2024 through D_YYYYMMDD and back
+MR1_003,Round-trip,2024/12/07,S_YYYYMMDD,D_DDMMYYYY,S_YYYYMMDD,Final equals seed,2024/12/07 through D_DDMMYYYY and back
+MR1_004,Round-trip,07-12-2024,D_DDMMYYYY,S_YYYYMMDD,D_DDMMYYYY,Final equals seed,07-12-2024 through S_YYYYMMDD and back
+MR1_005,Round-trip,2024-Dec-07,D_YYYYMMDD_N,S_DDMMYYYY,D_YYYYMMDD_N,Final equals seed,2024-Dec-07 through S_DDMMYYYY and back
+MR1_006,Round-trip,07-Jan-2024,D_DDMMYYYY_N,D_YYYYMMDD,D_DDMMYYYY_N,Final equals seed,07-Jan-2024 through D_YYYYMMDD and back
+MR1_007,Round-trip,24-12-07,D_YYMMDD,D_YYYYMMDD,D_YYMMDD,Final equals seed,24-12-07 through D_YYYYMMDD and back
+MR1_008,Round-trip,2020-02-29,D_YYYYMMDD,S_DDMMYYYY,D_YYYYMMDD,Final equals seed,2020-02-29 through S_DDMMYYYY and back
+MR1_009,Round-trip,31/12/2024,S_DDMMYYYY,D_YYYYMMDD,S_DDMMYYYY,Final equals seed,31/12/2024 through D_YYYYMMDD and back
+MR1_010,Round-trip,01/01/2000,S_DDMMYYYY,D_YYYYMMDD,S_DDMMYYYY,Final equals seed,01/01/2000 through D_YYYYMMDD and back
+MR2_001,Idempotency,2024-03-15,D_YYYYMMDD,S_DDMMYYYY,S_DDMMYYYY,Convert(x) = Convert(Convert(x)),Convert 2024-03-15 twice to S_DDMMYYYY
+MR2_002,Idempotency,15/03/2024,S_DDMMYYYY,D_YYYYMMDD,D_YYYYMMDD,Convert(x) = Convert(Convert(x)),Convert 15/03/2024 twice to D_YYYYMMDD
+MR2_003,Idempotency,2024/06/15,S_YYYYMMDD,D_DDMMYYYY,D_DDMMYYYY,Convert(x) = Convert(Convert(x)),Convert 2024/06/15 twice to D_DDMMYYYY
+MR2_004,Idempotency,2020-Feb-29,D_YYYYMMDD_N,D_YYYYMMDD,D_YYYYMMDD,Convert(x) = Convert(Convert(x)),Convert 2020-Feb-29 twice to D_YYYYMMDD
+MR2_005,Idempotency,24-06-15,D_YYMMDD,D_YYYYMMDD,D_YYYYMMDD,Convert(x) = Convert(Convert(x)),Convert 24-06-15 twice to D_YYYYMMDD
+MR3_001,Date arithmetic,2024-01-15|2024-01-16,D_YYYYMMDD,S_DDMMYYYY,D_YYYYMMDD,Difference maintained: 1 days,Consecutive days
+MR3_002,Date arithmetic,2024-02-28|2024-02-29,D_YYYYMMDD,S_DDMMYYYY,D_YYYYMMDD,Difference maintained: 1 days,Leap year boundary
+MR3_003,Date arithmetic,2024-12-31|2025-01-01,D_YYYYMMDD,S_DDMMYYYY,D_YYYYMMDD,Difference maintained: 1 days,Year boundary
+MR3_004,Date arithmetic,2024-01-01|2024-01-08,D_YYYYMMDD,S_DDMMYYYY,D_YYYYMMDD,Difference maintained: 7 days,One week
+MR3_005,Date arithmetic,2024-06-01|2024-06-30,D_YYYYMMDD,S_DDMMYYYY,D_YYYYMMDD,Difference maintained: 29 days,Month span
+MR3_006,Date arithmetic,2024-01-31|2024-02-01,D_YYYYMMDD,S_DDMMYYYY,D_YYYYMMDD,Difference maintained: 1 days,Month transition
+MR4_001,Invalid remains invalid,2024-02-30,D_YYYYMMDD,S_DDMMYYYY,N/A,Returns None,Feb 30
+MR4_002,Invalid remains invalid,2024-02-30,D_YYYYMMDD,D_DDMMYYYY,N/A,Returns None,Feb 30
+MR4_003,Invalid remains invalid,2024-02-30,D_YYYYMMDD,S_YYYYMMDD,N/A,Returns None,Feb 30
+MR4_004,Invalid remains invalid,2024-13-01,D_YYYYMMDD,S_DDMMYYYY,N/A,Returns None,Month 13
+MR4_005,Invalid remains invalid,2024-13-01,D_YYYYMMDD,D_DDMMYYYY,N/A,Returns None,Month 13
+MR4_006,Invalid remains invalid,2024-13-01,D_YYYYMMDD,S_YYYYMMDD,N/A,Returns None,Month 13
+MR4_007,Invalid remains invalid,2024-00-15,D_YYYYMMDD,S_DDMMYYYY,N/A,Returns None,Month 0
+MR4_008,Invalid remains invalid,2024-00-15,D_YYYYMMDD,D_DDMMYYYY,N/A,Returns None,Month 0
+MR4_009,Invalid remains invalid,2024-00-15,D_YYYYMMDD,S_YYYYMMDD,N/A,Returns None,Month 0
+MR4_010,Invalid remains invalid,2024-06-31,D_YYYYMMDD,S_DDMMYYYY,N/A,Returns None,June 31 (has 30)
+MR4_011,Invalid remains invalid,2024-06-31,D_YYYYMMDD,D_DDMMYYYY,N/A,Returns None,June 31 (has 30)
+MR4_012,Invalid remains invalid,2024-06-31,D_YYYYMMDD,S_YYYYMMDD,N/A,Returns None,June 31 (has 30)
+MR4_013,Invalid remains invalid,2024-04-31,D_YYYYMMDD,S_DDMMYYYY,N/A,Returns None,April 31 (has 30)
+MR4_014,Invalid remains invalid,2024-04-31,D_YYYYMMDD,D_DDMMYYYY,N/A,Returns None,April 31 (has 30)
+MR4_015,Invalid remains invalid,2024-04-31,D_YYYYMMDD,S_YYYYMMDD,N/A,Returns None,April 31 (has 30)
+MR4_016,Invalid remains invalid,2024-09-31,D_YYYYMMDD,S_DDMMYYYY,N/A,Returns None,Sep 31 (has 30)
+MR4_017,Invalid remains invalid,2024-09-31,D_YYYYMMDD,D_DDMMYYYY,N/A,Returns None,Sep 31 (has 30)
+MR4_018,Invalid remains invalid,2024-09-31,D_YYYYMMDD,S_YYYYMMDD,N/A,Returns None,Sep 31 (has 30)
+MR4_019,Invalid remains invalid,2024-11-31,D_YYYYMMDD,S_DDMMYYYY,N/A,Returns None,Nov 31 (has 30)
+MR4_020,Invalid remains invalid,2024-11-31,D_YYYYMMDD,D_DDMMYYYY,N/A,Returns None,Nov 31 (has 30)
+MR4_021,Invalid remains invalid,2024-11-31,D_YYYYMMDD,S_YYYYMMDD,N/A,Returns None,Nov 31 (has 30)
+MR4_022,Invalid remains invalid,32/01/2024,S_DDMMYYYY,S_DDMMYYYY,N/A,Returns None,Day 32
+MR4_023,Invalid remains invalid,32/01/2024,S_DDMMYYYY,D_DDMMYYYY,N/A,Returns None,Day 32
+MR4_024,Invalid remains invalid,32/01/2024,S_DDMMYYYY,S_YYYYMMDD,N/A,Returns None,Day 32
+MR4_025,Invalid remains invalid,00/01/2024,S_DDMMYYYY,S_DDMMYYYY,N/A,Returns None,Day 0
+MR4_026,Invalid remains invalid,00/01/2024,S_DDMMYYYY,D_DDMMYYYY,N/A,Returns None,Day 0
+MR4_027,Invalid remains invalid,00/01/2024,S_DDMMYYYY,S_YYYYMMDD,N/A,Returns None,Day 0
+MR4_028,Invalid remains invalid,15/13/2024,S_DDMMYYYY,S_DDMMYYYY,N/A,Returns None,Month 13
+MR4_029,Invalid remains invalid,15/13/2024,S_DDMMYYYY,D_DDMMYYYY,N/A,Returns None,Month 13
+MR4_030,Invalid remains invalid,15/13/2024,S_DDMMYYYY,S_YYYYMMDD,N/A,Returns None,Month 13
+MR4_031,Invalid remains invalid,15/00/2024,S_DDMMYYYY,S_DDMMYYYY,N/A,Returns None,Month 0
+MR4_032,Invalid remains invalid,15/00/2024,S_DDMMYYYY,D_DDMMYYYY,N/A,Returns None,Month 0
+MR4_033,Invalid remains invalid,15/00/2024,S_DDMMYYYY,S_YYYYMMDD,N/A,Returns None,Month 0
+MR4_034,Invalid remains invalid,2019-02-29,D_YYYYMMDD,S_DDMMYYYY,N/A,Returns None,Non-leap Feb 29 (2019)
+MR4_035,Invalid remains invalid,2019-02-29,D_YYYYMMDD,D_DDMMYYYY,N/A,Returns None,Non-leap Feb 29 (2019)
+MR4_036,Invalid remains invalid,2019-02-29,D_YYYYMMDD,S_YYYYMMDD,N/A,Returns None,Non-leap Feb 29 (2019)
+MR4_037,Invalid remains invalid,2021-02-29,D_YYYYMMDD,S_DDMMYYYY,N/A,Returns None,Non-leap Feb 29 (2021)
+MR4_038,Invalid remains invalid,2021-02-29,D_YYYYMMDD,D_DDMMYYYY,N/A,Returns None,Non-leap Feb 29 (2021)
+MR4_039,Invalid remains invalid,2021-02-29,D_YYYYMMDD,S_YYYYMMDD,N/A,Returns None,Non-leap Feb 29 (2021)
+MR4_040,Invalid remains invalid,2023-02-29,D_YYYYMMDD,S_DDMMYYYY,N/A,Returns None,Non-leap Feb 29 (2023)
+MR4_041,Invalid remains invalid,2023-02-29,D_YYYYMMDD,D_DDMMYYYY,N/A,Returns None,Non-leap Feb 29 (2023)
+MR4_042,Invalid remains invalid,2023-02-29,D_YYYYMMDD,S_YYYYMMDD,N/A,Returns None,Non-leap Feb 29 (2023)
+MR4_043,Invalid remains invalid,1900-02-29,D_YYYYMMDD,S_DDMMYYYY,N/A,Returns None,1900 not leap (÷100 not ÷400)
+MR4_044,Invalid remains invalid,1900-02-29,D_YYYYMMDD,D_DDMMYYYY,N/A,Returns None,1900 not leap (÷100 not ÷400)
+MR4_045,Invalid remains invalid,1900-02-29,D_YYYYMMDD,S_YYYYMMDD,N/A,Returns None,1900 not leap (÷100 not ÷400)
+MR4_046,Invalid remains invalid,2100-02-29,D_YYYYMMDD,S_DDMMYYYY,N/A,Returns None,2100 not leap (÷100 not ÷400)
+MR4_047,Invalid remains invalid,2100-02-29,D_YYYYMMDD,D_DDMMYYYY,N/A,Returns None,2100 not leap (÷100 not ÷400)
+MR4_048,Invalid remains invalid,2100-02-29,D_YYYYMMDD,S_YYYYMMDD,N/A,Returns None,2100 not leap (÷100 not ÷400)
+MR4_049,Invalid remains invalid,,D_YYYYMMDD,S_DDMMYYYY,N/A,Returns None,Empty string
+MR4_050,Invalid remains invalid,,D_YYYYMMDD,D_DDMMYYYY,N/A,Returns None,Empty string
+MR4_051,Invalid remains invalid,,D_YYYYMMDD,S_YYYYMMDD,N/A,Returns None,Empty string
+MR4_052,Invalid remains invalid,invalid-date,D_YYYYMMDD,S_DDMMYYYY,N/A,Returns None,Malformed
+MR4_053,Invalid remains invalid,invalid-date,D_YYYYMMDD,D_DDMMYYYY,N/A,Returns None,Malformed
+MR4_054,Invalid remains invalid,invalid-date,D_YYYYMMDD,S_YYYYMMDD,N/A,Returns None,Malformed
+MR4_055,Invalid remains invalid,2024/01/15,D_YYYYMMDD,S_DDMMYYYY,N/A,Returns None,Wrong separator
+MR4_056,Invalid remains invalid,2024/01/15,D_YYYYMMDD,D_DDMMYYYY,N/A,Returns None,Wrong separator
+MR4_057,Invalid remains invalid,2024/01/15,D_YYYYMMDD,S_YYYYMMDD,N/A,Returns None,Wrong separator
+MR5_001,Component preservation,2024-01-15,D_YYYYMMDD,D_DDMMYYYY,D_YYYYMMDD,Structure preserved,Dash separator preserved
+MR5_002,Component preservation,2024/01/15,S_YYYYMMDD,S_DDMMYYYY,S_YYYYMMDD,Structure preserved,Slash separator preserved
+MR5_003,Component preservation,2024-Jan-15,D_YYYYMMDD_N,D_DDMMYYYY_N,D_YYYYMMDD_N,Structure preserved,Text month with dash
+MR5_004,Component preservation,15-03-2024,D_DDMMYYYY,D_YYYYMMDD,D_DDMMYYYY,Structure preserved,Reorder with dash
+MR5_005,Component preservation,15/03/2024,S_DDMMYYYY,S_YYYYMMDD,S_DDMMYYYY,Structure preserved,Reorder with slash
+MR5_006,Component preservation,24-06-15,D_YYMMDD,S_YYMMDD,D_YYMMDD,Year format handled,2-digit year preserved
+MR5_007,Component preservation,2024-06-15,D_YYYYMMDD,S_YYYYMMDD,D_YYYYMMDD,Year format handled,4-digit year preserved
+MR5_008,Component preservation,24-06-15,D_YYMMDD,D_YYYYMMDD,D_YYMMDD,Year format handled,2-digit to 4-digit
+MR5_009,Component preservation,2024-06-15,D_YYYYMMDD,D_YYMMDD,D_YYYYMMDD,Year format handled,4-digit to 2-digit

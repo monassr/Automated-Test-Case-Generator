@@ -1,0 +1,88 @@
+test_id,category,date_input,input_format,output_format,expected_output,constraint,description
+CP_001,dash_numeric_31days,2024-01-01,D_YYYYMMDD,D_DDMMYYYY,01-01-2024,31-day months valid,Valid date in 01 with 01 day
+CP_002,dash_numeric_31days,2024-01-15,D_YYYYMMDD,D_DDMMYYYY,15-01-2024,31-day months valid,Valid date in 01 with 15 day
+CP_003,dash_numeric_31days,2024-01-31,D_YYYYMMDD,D_DDMMYYYY,31-01-2024,31-day months valid,Valid date in 01 with 31 day
+CP_004,dash_numeric_31days,2024-03-01,D_YYYYMMDD,D_DDMMYYYY,01-03-2024,31-day months valid,Valid date in 03 with 01 day
+CP_005,dash_numeric_31days,2024-03-15,D_YYYYMMDD,D_DDMMYYYY,15-03-2024,31-day months valid,Valid date in 03 with 15 day
+CP_006,dash_numeric_31days,2024-03-31,D_YYYYMMDD,D_DDMMYYYY,31-03-2024,31-day months valid,Valid date in 03 with 31 day
+CP_007,slash_numeric_31days,2024/01/01,S_YYYYMMDD,S_DDMMYYYY,01/01/2024,31-day months valid,Valid date in 01 with 01 day
+CP_008,slash_numeric_31days,2024/01/15,S_YYYYMMDD,S_DDMMYYYY,15/01/2024,31-day months valid,Valid date in 01 with 15 day
+CP_009,slash_numeric_31days,2024/01/31,S_YYYYMMDD,S_DDMMYYYY,31/01/2024,31-day months valid,Valid date in 01 with 31 day
+CP_010,slash_numeric_31days,2024/03/01,S_YYYYMMDD,S_DDMMYYYY,01/03/2024,31-day months valid,Valid date in 03 with 01 day
+CP_011,slash_numeric_31days,2024/03/15,S_YYYYMMDD,S_DDMMYYYY,15/03/2024,31-day months valid,Valid date in 03 with 15 day
+CP_012,slash_numeric_31days,2024/03/31,S_YYYYMMDD,S_DDMMYYYY,31/03/2024,31-day months valid,Valid date in 03 with 31 day
+CP_013,dash_text_31days,2024-01-01,D_YYYYMMDD_N,D_DDMMYYYY_N,01-01-2024,31-day months valid,Valid date in 01 with 01 day
+CP_014,dash_text_31days,2024-01-15,D_YYYYMMDD_N,D_DDMMYYYY_N,15-01-2024,31-day months valid,Valid date in 01 with 15 day
+CP_015,dash_text_31days,2024-01-31,D_YYYYMMDD_N,D_DDMMYYYY_N,31-01-2024,31-day months valid,Valid date in 01 with 31 day
+CP_016,dash_text_31days,2024-03-01,D_YYYYMMDD_N,D_DDMMYYYY_N,01-03-2024,31-day months valid,Valid date in 03 with 01 day
+CP_017,dash_text_31days,2024-03-15,D_YYYYMMDD_N,D_DDMMYYYY_N,15-03-2024,31-day months valid,Valid date in 03 with 15 day
+CP_018,dash_text_31days,2024-03-31,D_YYYYMMDD_N,D_DDMMYYYY_N,31-03-2024,31-day months valid,Valid date in 03 with 31 day
+CP_019,two_digit_year_31days,2024-01-01,D_YYMMDD,S_YYMMDD,2024/01/01,31-day months valid,Valid date in 01 with 01 day
+CP_020,two_digit_year_31days,2024-01-15,D_YYMMDD,S_YYMMDD,2024/01/15,31-day months valid,Valid date in 01 with 15 day
+CP_021,two_digit_year_31days,2024-01-31,D_YYMMDD,S_YYMMDD,2024/01/31,31-day months valid,Valid date in 01 with 31 day
+CP_022,two_digit_year_31days,2024-03-01,D_YYMMDD,S_YYMMDD,2024/03/01,31-day months valid,Valid date in 03 with 01 day
+CP_023,two_digit_year_31days,2024-03-15,D_YYMMDD,S_YYMMDD,2024/03/15,31-day months valid,Valid date in 03 with 15 day
+CP_024,two_digit_year_31days,2024-03-31,D_YYMMDD,S_YYMMDD,2024/03/31,31-day months valid,Valid date in 03 with 31 day
+CP_025,dash_numeric_30days,2024-04-01,D_YYYYMMDD,D_DDMMYYYY,01-04-2024,30-day months valid,Valid date in 04 with 01 day
+CP_026,dash_numeric_30days,2024-04-15,D_YYYYMMDD,D_DDMMYYYY,15-04-2024,30-day months valid,Valid date in 04 with 15 day
+CP_027,dash_numeric_30days,2024-04-30,D_YYYYMMDD,D_DDMMYYYY,30-04-2024,30-day months valid,Valid date in 04 with 30 day
+CP_028,dash_numeric_30days,2024-06-01,D_YYYYMMDD,D_DDMMYYYY,01-06-2024,30-day months valid,Valid date in 06 with 01 day
+CP_029,dash_numeric_30days,2024-06-15,D_YYYYMMDD,D_DDMMYYYY,15-06-2024,30-day months valid,Valid date in 06 with 15 day
+CP_030,dash_numeric_30days,2024-06-30,D_YYYYMMDD,D_DDMMYYYY,30-06-2024,30-day months valid,Valid date in 06 with 30 day
+CP_031,slash_numeric_30days,2024/04/01,S_YYYYMMDD,S_DDMMYYYY,01/04/2024,30-day months valid,Valid date in 04 with 01 day
+CP_032,slash_numeric_30days,2024/04/15,S_YYYYMMDD,S_DDMMYYYY,15/04/2024,30-day months valid,Valid date in 04 with 15 day
+CP_033,slash_numeric_30days,2024/04/30,S_YYYYMMDD,S_DDMMYYYY,30/04/2024,30-day months valid,Valid date in 04 with 30 day
+CP_034,slash_numeric_30days,2024/06/01,S_YYYYMMDD,S_DDMMYYYY,01/06/2024,30-day months valid,Valid date in 06 with 01 day
+CP_035,slash_numeric_30days,2024/06/15,S_YYYYMMDD,S_DDMMYYYY,15/06/2024,30-day months valid,Valid date in 06 with 15 day
+CP_036,slash_numeric_30days,2024/06/30,S_YYYYMMDD,S_DDMMYYYY,30/06/2024,30-day months valid,Valid date in 06 with 30 day
+CP_037,february_leap,2020-02-01,D_YYYYMMDD,D_DDMMYYYY,01-02-2020,Feb in leap year valid,Leap year 2020 Feb 01
+CP_038,february_leap,2020-02-15,D_YYYYMMDD,D_DDMMYYYY,15-02-2020,Feb in leap year valid,Leap year 2020 Feb 15
+CP_039,february_leap,2020-02-28,D_YYYYMMDD,D_DDMMYYYY,28-02-2020,Feb in leap year valid,Leap year 2020 Feb 28
+CP_040,february_leap,2020-02-29,D_YYYYMMDD,D_DDMMYYYY,29-02-2020,Feb in leap year valid,Leap year 2020 Feb 29
+CP_041,february_leap,2024-02-01,D_YYYYMMDD,D_DDMMYYYY,01-02-2024,Feb in leap year valid,Leap year 2024 Feb 01
+CP_042,february_leap,2024-02-15,D_YYYYMMDD,D_DDMMYYYY,15-02-2024,Feb in leap year valid,Leap year 2024 Feb 15
+CP_043,february_leap,2024-02-28,D_YYYYMMDD,D_DDMMYYYY,28-02-2024,Feb in leap year valid,Leap year 2024 Feb 28
+CP_044,february_leap,2024-02-29,D_YYYYMMDD,D_DDMMYYYY,29-02-2024,Feb in leap year valid,Leap year 2024 Feb 29
+CP_045,february_leap,2020/02/01,S_YYYYMMDD,S_DDMMYYYY,01/02/2020,Feb in leap year valid,Leap year 2020 Feb 01
+CP_046,february_leap,2020/02/15,S_YYYYMMDD,S_DDMMYYYY,15/02/2020,Feb in leap year valid,Leap year 2020 Feb 15
+CP_047,february_leap,2020/02/28,S_YYYYMMDD,S_DDMMYYYY,28/02/2020,Feb in leap year valid,Leap year 2020 Feb 28
+CP_048,february_leap,2020/02/29,S_YYYYMMDD,S_DDMMYYYY,29/02/2020,Feb in leap year valid,Leap year 2020 Feb 29
+CP_049,february_leap,2024/02/01,S_YYYYMMDD,S_DDMMYYYY,01/02/2024,Feb in leap year valid,Leap year 2024 Feb 01
+CP_050,february_leap,2024/02/15,S_YYYYMMDD,S_DDMMYYYY,15/02/2024,Feb in leap year valid,Leap year 2024 Feb 15
+CP_051,february_leap,2024/02/28,S_YYYYMMDD,S_DDMMYYYY,28/02/2024,Feb in leap year valid,Leap year 2024 Feb 28
+CP_052,february_leap,2024/02/29,S_YYYYMMDD,S_DDMMYYYY,29/02/2024,Feb in leap year valid,Leap year 2024 Feb 29
+CP_053,february_non_leap_valid,2019-02-01,D_YYYYMMDD,D_DDMMYYYY,01-02-2019,Feb non-leap valid,Non-leap year 2019 Feb 01
+CP_054,february_non_leap_valid,2019-02-28,D_YYYYMMDD,D_DDMMYYYY,28-02-2019,Feb non-leap valid,Non-leap year 2019 Feb 28
+CP_055,february_non_leap_invalid,2019-02-29,D_YYYYMMDD,D_DDMMYYYY,,Feb 29 non-leap invalid,Non-leap year 2019 Feb 29 (invalid)
+CP_056,february_non_leap_valid,2019/02/01,S_YYYYMMDD,S_DDMMYYYY,01/02/2019,Feb non-leap valid,Non-leap year 2019 Feb 01
+CP_057,february_non_leap_valid,2019/02/28,S_YYYYMMDD,S_DDMMYYYY,28/02/2019,Feb non-leap valid,Non-leap year 2019 Feb 28
+CP_058,february_non_leap_invalid,2019/02/29,S_YYYYMMDD,S_DDMMYYYY,,Feb 29 non-leap invalid,Non-leap year 2019 Feb 29 (invalid)
+CP_059,century_leap,2000-02-29,D_YYYYMMDD,D_DDMMYYYY,29-02-2000,2000 is leap year,Year 2000 Feb 29 (valid)
+CP_060,century_non_leap,1900-02-29,D_YYYYMMDD,D_DDMMYYYY,,1900 not leap year,Year 1900 Feb 29 (invalid)
+CP_061,century_leap,2000/02/29,S_YYYYMMDD,S_DDMMYYYY,29/02/2000,2000 is leap year,Year 2000 Feb 29 (valid)
+CP_062,century_non_leap,1900/02/29,S_YYYYMMDD,S_DDMMYYYY,,1900 not leap year,Year 1900 Feb 29 (invalid)
+CP_063,invalid_day_for_month,2024-02-30,D_YYYYMMDD,D_DDMMYYYY,,Invalid day for month,Feb 30 invalid
+CP_064,invalid_day_for_month,2024-04-31,D_YYYYMMDD,D_DDMMYYYY,,Invalid day for month,April 31 invalid
+CP_065,invalid_day_for_month,2024/06/31,S_YYYYMMDD,S_DDMMYYYY,,Invalid day for month,June 31 invalid
+CP_066,invalid_day_for_month,2024-09-31,D_YYYYMMDD,D_DDMMYYYY,,Invalid day for month,September 31 invalid
+CP_067,invalid_day_for_month,2024/11/31,S_YYYYMMDD,S_DDMMYYYY,,Invalid day for month,November 31 invalid
+CP_068,text_month_conversion,2024-Jan-15,D_YYYYMMDD_N,D_YYYYMMDD,2024-01-15,Text to numeric month,Convert Jan to 01
+CP_069,text_month_conversion,2024-Jun-15,D_YYYYMMDD_N,D_YYYYMMDD,2024-06-15,Text to numeric month,Convert Jun to 06
+CP_070,text_month_conversion,2024-Dec-15,D_YYYYMMDD_N,D_YYYYMMDD,2024-12-15,Text to numeric month,Convert Dec to 12
+CP_071,text_month_conversion,2024-Jan-15,D_YYYYMMDD_N,D_DDMMYYYY,15-01-2024,Text to numeric month,Convert Jan to 01
+CP_072,text_month_conversion,2024-Jun-15,D_YYYYMMDD_N,D_DDMMYYYY,15-06-2024,Text to numeric month,Convert Jun to 06
+CP_073,text_month_conversion,2024-Dec-15,D_YYYYMMDD_N,D_DDMMYYYY,15-12-2024,Text to numeric month,Convert Dec to 12
+CP_074,text_month_conversion,15-Jan-2024,D_DDMMYYYY_N,D_YYYYMMDD,2024-01-15,Text to numeric month,Convert Jan to 01
+CP_075,text_month_conversion,15-Jun-2024,D_DDMMYYYY_N,D_YYYYMMDD,2024-06-15,Text to numeric month,Convert Jun to 06
+CP_076,text_month_conversion,15-Dec-2024,D_DDMMYYYY_N,D_YYYYMMDD,2024-12-15,Text to numeric month,Convert Dec to 12
+CP_077,text_month_conversion,15-Jan-2024,D_DDMMYYYY_N,D_DDMMYYYY,15-01-2024,Text to numeric month,Convert Jan to 01
+CP_078,text_month_conversion,15-Jun-2024,D_DDMMYYYY_N,D_DDMMYYYY,15-06-2024,Text to numeric month,Convert Jun to 06
+CP_079,text_month_conversion,15-Dec-2024,D_DDMMYYYY_N,D_DDMMYYYY,15-12-2024,Text to numeric month,Convert Dec to 12
+CP_080,two_digit_year,24-06-15,D_YYMMDD,D_YYYYMMDD,2024-06-15,2-digit to 4-digit year,Convert 24 to 2024
+CP_081,two_digit_year,20-06-15,D_YYMMDD,D_YYYYMMDD,2020-06-15,2-digit to 4-digit year,Convert 20 to 2020
+CP_082,two_digit_year,00-06-15,D_YYMMDD,D_YYYYMMDD,2000-06-15,2-digit to 4-digit year,Convert 00 to 2000
+CP_083,two_digit_year,99-06-15,D_YYMMDD,D_YYYYMMDD,1999-06-15,2-digit to 4-digit year,Convert 99 to 1999
+CP_084,two_digit_year,24/06/15,S_YYMMDD,D_YYYYMMDD,2024-06-15,2-digit to 4-digit year,Convert 24 to 2024
+CP_085,two_digit_year,20/06/15,S_YYMMDD,D_YYYYMMDD,2020-06-15,2-digit to 4-digit year,Convert 20 to 2020
+CP_086,two_digit_year,00/06/15,S_YYMMDD,D_YYYYMMDD,2000-06-15,2-digit to 4-digit year,Convert 00 to 2000
+CP_087,two_digit_year,99/06/15,S_YYMMDD,D_YYYYMMDD,1999-06-15,2-digit to 4-digit year,Convert 99 to 1999
