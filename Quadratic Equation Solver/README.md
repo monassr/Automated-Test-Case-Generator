@@ -100,11 +100,11 @@ This opens an interactive browser where you can explore the mutation testing res
 
 ## Test Files Available
 
-- `tests/test_base.py` - Base test set mutations
-- `tests/test_pairwise.py` - Pairwise test set mutations
-- `tests/test_metamorphic.py` - Metamorphic test mutations
-- `tests/test_allcombination.py` - All combination test mutations
-- `tests/test_relation.py` - Metamorphic relation tests
+- `tests/test_base.py` - Base test implementation for Coverage/Mutations evaluation
+- `tests/test_pairwise.py` - Pairwise test implementation for Coverage/Mutations evaluation
+- `tests/test_metamorphic.py` - Metamorphic test implementation for Coverage/Mutations evaluation
+- `tests/test_allcombination.py` - All combination test implementation for Coverage/Mutations evaluation
+- `tests/test_metmorphic_relation.py` - Metamorphic relation testing for MR1 and MR2
 
 ## Output Files
 

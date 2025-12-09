@@ -56,7 +56,7 @@ def x_solve_quadratic__mutmut_orig(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
@@ -97,7 +97,7 @@ def x_solve_quadratic__mutmut_1(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
@@ -138,7 +138,7 @@ def x_solve_quadratic__mutmut_2(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
@@ -179,7 +179,7 @@ def x_solve_quadratic__mutmut_3(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
@@ -220,7 +220,7 @@ def x_solve_quadratic__mutmut_4(row):
         b = None
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
@@ -261,7 +261,7 @@ def x_solve_quadratic__mutmut_5(row):
         b = float(None)
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
@@ -302,7 +302,7 @@ def x_solve_quadratic__mutmut_6(row):
         b = float(row[2])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
@@ -343,7 +343,7 @@ def x_solve_quadratic__mutmut_7(row):
         b = float(row[1])
         c = None
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
@@ -384,7 +384,7 @@ def x_solve_quadratic__mutmut_8(row):
         b = float(row[1])
         c = float(None)
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
@@ -425,7 +425,7 @@ def x_solve_quadratic__mutmut_9(row):
         b = float(row[1])
         c = float(row[3])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
@@ -466,7 +466,7 @@ def x_solve_quadratic__mutmut_10(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXXXincorrect_typeXXXX", ["N/A", "N/A"]
+        return "XXincorrect_typeXX", ["N/A", "N/A"]
 
     
     if a == 0.0:
@@ -507,7 +507,7 @@ def x_solve_quadratic__mutmut_11(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "xxincorrect_typexx", ["N/A", "N/A"]
+        return "INCORRECT_TYPE", ["N/A", "N/A"]
 
     
     if a == 0.0:
@@ -548,7 +548,7 @@ def x_solve_quadratic__mutmut_12(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXINCORRECT_TYPEXX", ["N/A", "N/A"]
+        return "incorrect_type", ["XXN/AXX", "N/A"]
 
     
     if a == 0.0:
@@ -589,7 +589,7 @@ def x_solve_quadratic__mutmut_13(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["XXN/AXX", "N/A"]
+        return "incorrect_type", ["n/a", "N/A"]
 
     
     if a == 0.0:
@@ -630,7 +630,7 @@ def x_solve_quadratic__mutmut_14(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["n/a", "N/A"]
+        return "incorrect_type", ["N/A", "XXN/AXX"]
 
     
     if a == 0.0:
@@ -671,7 +671,7 @@ def x_solve_quadratic__mutmut_15(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "XXN/AXX"]
+        return "incorrect_type", ["N/A", "n/a"]
 
     
     if a == 0.0:
@@ -712,10 +712,10 @@ def x_solve_quadratic__mutmut_16(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "n/a"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
-    if a == 0.0:
+    if a != 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
@@ -753,10 +753,10 @@ def x_solve_quadratic__mutmut_17(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
-    if a != 0.0:
+    if a == 1.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
@@ -794,11 +794,11 @@ def x_solve_quadratic__mutmut_18(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
-    if a == 1.0:
-        if b == 0.0:
+    if a == 0.0:
+        if b != 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
@@ -835,11 +835,11 @@ def x_solve_quadratic__mutmut_19(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
-        if b != 0.0:
+        if b == 1.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
@@ -876,12 +876,12 @@ def x_solve_quadratic__mutmut_20(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
-        if b == 1.0:
-            if c == 0.0:
+        if b == 0.0:
+            if c != 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
@@ -917,12 +917,12 @@ def x_solve_quadratic__mutmut_21(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
         if b == 0.0:
-            if c != 0.0:
+            if c == 1.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
@@ -958,13 +958,13 @@ def x_solve_quadratic__mutmut_22(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
         if b == 0.0:
-            if c == 1.0:
-                return "infinite_solutions", ["N/A", "N/A"]
+            if c == 0.0:
+                return "XXinfinite_solutionsXX", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
         
@@ -999,13 +999,13 @@ def x_solve_quadratic__mutmut_23(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
-                return "XXinfinite_solutionsXX", ["N/A", "N/A"]
+                return "INFINITE_SOLUTIONS", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
         
@@ -1040,13 +1040,13 @@ def x_solve_quadratic__mutmut_24(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
-                return "INFINITE_SOLUTIONS", ["N/A", "N/A"]
+                return "infinite_solutions", ["XXN/AXX", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
         
@@ -1081,13 +1081,13 @@ def x_solve_quadratic__mutmut_25(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
-                return "infinite_solutions", ["XXN/AXX", "N/A"]
+                return "infinite_solutions", ["n/a", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
         
@@ -1122,13 +1122,13 @@ def x_solve_quadratic__mutmut_26(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
-                return "infinite_solutions", ["n/a", "N/A"]
+                return "infinite_solutions", ["N/A", "XXN/AXX"]
             else:
                 return "no_solution", ["N/A", "N/A"]
         
@@ -1163,13 +1163,13 @@ def x_solve_quadratic__mutmut_27(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
-                return "infinite_solutions", ["N/A", "XXN/AXX"]
+                return "infinite_solutions", ["N/A", "n/a"]
             else:
                 return "no_solution", ["N/A", "N/A"]
         
@@ -1204,48 +1204,7 @@ def x_solve_quadratic__mutmut_28(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
-
-    
-    if a == 0.0:
-        if b == 0.0:
-            if c == 0.0:
-                return "infinite_solutions", ["N/A", "n/a"]
-            else:
-                return "no_solution", ["N/A", "N/A"]
-        
-        root = -c / b
-        return "linear", [root, "N/A"]
-
-    disc = b * b - 4 * a * c
-    if math.isinf(disc) or math.isnan(disc):
-        return "overflow", ["N/A", "N/A"]
-
-    if disc > 0:
-        
-        sqrt_d = math.sqrt(disc)
-        x1 = (-b + sqrt_d) / (2 * a)
-        x2 = (-b - sqrt_d) / (2 * a)
-        return "quadratic_two_real", [x1, x2]
-    elif disc == 0:
-        
-        x = -b / (2 * a)
-        return "quadratic_one_real", [x, "N/A"]
-    else:
-        
-        sqrt_d = cmath.sqrt(disc)
-        x1 = (-b + sqrt_d) / (2 * a)
-        x2 = (-b - sqrt_d) / (2 * a)
-        return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_29(row):
-
-    
-    try:
-        a = float(row[0])
-        b = float(row[1])
-        c = float(row[2])
-    except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
@@ -1278,7 +1237,7 @@ def x_solve_quadratic__mutmut_29(row):
         x1 = (-b + sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_30(row):
+def x_solve_quadratic__mutmut_29(row):
 
     
     try:
@@ -1286,7 +1245,7 @@ def x_solve_quadratic__mutmut_30(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
@@ -1319,7 +1278,7 @@ def x_solve_quadratic__mutmut_30(row):
         x1 = (-b + sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_31(row):
+def x_solve_quadratic__mutmut_30(row):
 
     
     try:
@@ -1327,7 +1286,7 @@ def x_solve_quadratic__mutmut_31(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
@@ -1360,7 +1319,7 @@ def x_solve_quadratic__mutmut_31(row):
         x1 = (-b + sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_32(row):
+def x_solve_quadratic__mutmut_31(row):
 
     
     try:
@@ -1368,7 +1327,7 @@ def x_solve_quadratic__mutmut_32(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
@@ -1401,7 +1360,7 @@ def x_solve_quadratic__mutmut_32(row):
         x1 = (-b + sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_33(row):
+def x_solve_quadratic__mutmut_32(row):
 
     
     try:
@@ -1409,7 +1368,7 @@ def x_solve_quadratic__mutmut_33(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
@@ -1442,7 +1401,7 @@ def x_solve_quadratic__mutmut_33(row):
         x1 = (-b + sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_34(row):
+def x_solve_quadratic__mutmut_33(row):
 
     
     try:
@@ -1450,7 +1409,7 @@ def x_solve_quadratic__mutmut_34(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
@@ -1483,7 +1442,7 @@ def x_solve_quadratic__mutmut_34(row):
         x1 = (-b + sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_35(row):
+def x_solve_quadratic__mutmut_34(row):
 
     
     try:
@@ -1491,7 +1450,7 @@ def x_solve_quadratic__mutmut_35(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
@@ -1524,7 +1483,7 @@ def x_solve_quadratic__mutmut_35(row):
         x1 = (-b + sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_36(row):
+def x_solve_quadratic__mutmut_35(row):
 
     
     try:
@@ -1532,7 +1491,7 @@ def x_solve_quadratic__mutmut_36(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
@@ -1565,7 +1524,7 @@ def x_solve_quadratic__mutmut_36(row):
         x1 = (-b + sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_37(row):
+def x_solve_quadratic__mutmut_36(row):
 
     
     try:
@@ -1573,7 +1532,7 @@ def x_solve_quadratic__mutmut_37(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
@@ -1606,7 +1565,7 @@ def x_solve_quadratic__mutmut_37(row):
         x1 = (-b + sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_38(row):
+def x_solve_quadratic__mutmut_37(row):
 
     
     try:
@@ -1614,7 +1573,7 @@ def x_solve_quadratic__mutmut_38(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
@@ -1647,7 +1606,7 @@ def x_solve_quadratic__mutmut_38(row):
         x1 = (-b + sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_39(row):
+def x_solve_quadratic__mutmut_38(row):
 
     
     try:
@@ -1655,7 +1614,7 @@ def x_solve_quadratic__mutmut_39(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
@@ -1688,7 +1647,7 @@ def x_solve_quadratic__mutmut_39(row):
         x1 = (-b + sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_40(row):
+def x_solve_quadratic__mutmut_39(row):
 
     
     try:
@@ -1696,7 +1655,7 @@ def x_solve_quadratic__mutmut_40(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
@@ -1729,7 +1688,7 @@ def x_solve_quadratic__mutmut_40(row):
         x1 = (-b + sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_41(row):
+def x_solve_quadratic__mutmut_40(row):
 
     
     try:
@@ -1737,7 +1696,7 @@ def x_solve_quadratic__mutmut_41(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
@@ -1770,7 +1729,7 @@ def x_solve_quadratic__mutmut_41(row):
         x1 = (-b + sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_42(row):
+def x_solve_quadratic__mutmut_41(row):
 
     
     try:
@@ -1778,7 +1737,7 @@ def x_solve_quadratic__mutmut_42(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
@@ -1811,7 +1770,7 @@ def x_solve_quadratic__mutmut_42(row):
         x1 = (-b + sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_43(row):
+def x_solve_quadratic__mutmut_42(row):
 
     
     try:
@@ -1819,7 +1778,7 @@ def x_solve_quadratic__mutmut_43(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
@@ -1852,7 +1811,7 @@ def x_solve_quadratic__mutmut_43(row):
         x1 = (-b + sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_44(row):
+def x_solve_quadratic__mutmut_43(row):
 
     
     try:
@@ -1860,7 +1819,7 @@ def x_solve_quadratic__mutmut_44(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
@@ -1893,7 +1852,7 @@ def x_solve_quadratic__mutmut_44(row):
         x1 = (-b + sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_45(row):
+def x_solve_quadratic__mutmut_44(row):
 
     
     try:
@@ -1901,7 +1860,7 @@ def x_solve_quadratic__mutmut_45(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
@@ -1934,7 +1893,7 @@ def x_solve_quadratic__mutmut_45(row):
         x1 = (-b + sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_46(row):
+def x_solve_quadratic__mutmut_45(row):
 
     
     try:
@@ -1942,7 +1901,7 @@ def x_solve_quadratic__mutmut_46(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
@@ -1975,7 +1934,7 @@ def x_solve_quadratic__mutmut_46(row):
         x1 = (-b + sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_47(row):
+def x_solve_quadratic__mutmut_46(row):
 
     
     try:
@@ -1983,7 +1942,7 @@ def x_solve_quadratic__mutmut_47(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
@@ -2016,7 +1975,7 @@ def x_solve_quadratic__mutmut_47(row):
         x1 = (-b + sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_48(row):
+def x_solve_quadratic__mutmut_47(row):
 
     
     try:
@@ -2024,7 +1983,7 @@ def x_solve_quadratic__mutmut_48(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
@@ -2057,7 +2016,7 @@ def x_solve_quadratic__mutmut_48(row):
         x1 = (-b + sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_49(row):
+def x_solve_quadratic__mutmut_48(row):
 
     
     try:
@@ -2065,7 +2024,7 @@ def x_solve_quadratic__mutmut_49(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
@@ -2098,7 +2057,7 @@ def x_solve_quadratic__mutmut_49(row):
         x1 = (-b + sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_50(row):
+def x_solve_quadratic__mutmut_49(row):
 
     
     try:
@@ -2106,7 +2065,7 @@ def x_solve_quadratic__mutmut_50(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
@@ -2139,7 +2098,7 @@ def x_solve_quadratic__mutmut_50(row):
         x1 = (-b + sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_51(row):
+def x_solve_quadratic__mutmut_50(row):
 
     
     try:
@@ -2147,7 +2106,7 @@ def x_solve_quadratic__mutmut_51(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
@@ -2180,7 +2139,7 @@ def x_solve_quadratic__mutmut_51(row):
         x1 = (-b + sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_52(row):
+def x_solve_quadratic__mutmut_51(row):
 
     
     try:
@@ -2188,7 +2147,7 @@ def x_solve_quadratic__mutmut_52(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
@@ -2221,7 +2180,7 @@ def x_solve_quadratic__mutmut_52(row):
         x1 = (-b + sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_53(row):
+def x_solve_quadratic__mutmut_52(row):
 
     
     try:
@@ -2229,7 +2188,7 @@ def x_solve_quadratic__mutmut_53(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
@@ -2262,7 +2221,7 @@ def x_solve_quadratic__mutmut_53(row):
         x1 = (-b + sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_54(row):
+def x_solve_quadratic__mutmut_53(row):
 
     
     try:
@@ -2270,7 +2229,7 @@ def x_solve_quadratic__mutmut_54(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
@@ -2303,7 +2262,7 @@ def x_solve_quadratic__mutmut_54(row):
         x1 = (-b + sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_55(row):
+def x_solve_quadratic__mutmut_54(row):
 
     
     try:
@@ -2311,7 +2270,7 @@ def x_solve_quadratic__mutmut_55(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
@@ -2344,7 +2303,7 @@ def x_solve_quadratic__mutmut_55(row):
         x1 = (-b + sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_56(row):
+def x_solve_quadratic__mutmut_55(row):
 
     
     try:
@@ -2352,7 +2311,7 @@ def x_solve_quadratic__mutmut_56(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
@@ -2385,7 +2344,7 @@ def x_solve_quadratic__mutmut_56(row):
         x1 = (-b + sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_57(row):
+def x_solve_quadratic__mutmut_56(row):
 
     
     try:
@@ -2393,7 +2352,7 @@ def x_solve_quadratic__mutmut_57(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
@@ -2426,7 +2385,7 @@ def x_solve_quadratic__mutmut_57(row):
         x1 = (-b + sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_58(row):
+def x_solve_quadratic__mutmut_57(row):
 
     
     try:
@@ -2434,7 +2393,7 @@ def x_solve_quadratic__mutmut_58(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
@@ -2467,7 +2426,7 @@ def x_solve_quadratic__mutmut_58(row):
         x1 = (-b + sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_59(row):
+def x_solve_quadratic__mutmut_58(row):
 
     
     try:
@@ -2475,7 +2434,7 @@ def x_solve_quadratic__mutmut_59(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
@@ -2508,7 +2467,7 @@ def x_solve_quadratic__mutmut_59(row):
         x1 = (-b + sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_60(row):
+def x_solve_quadratic__mutmut_59(row):
 
     
     try:
@@ -2516,7 +2475,7 @@ def x_solve_quadratic__mutmut_60(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
@@ -2549,7 +2508,7 @@ def x_solve_quadratic__mutmut_60(row):
         x1 = (-b + sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_61(row):
+def x_solve_quadratic__mutmut_60(row):
 
     
     try:
@@ -2557,7 +2516,7 @@ def x_solve_quadratic__mutmut_61(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
@@ -2590,7 +2549,7 @@ def x_solve_quadratic__mutmut_61(row):
         x1 = (-b + sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_62(row):
+def x_solve_quadratic__mutmut_61(row):
 
     
     try:
@@ -2598,7 +2557,7 @@ def x_solve_quadratic__mutmut_62(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
@@ -2631,7 +2590,7 @@ def x_solve_quadratic__mutmut_62(row):
         x1 = (-b + sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_63(row):
+def x_solve_quadratic__mutmut_62(row):
 
     
     try:
@@ -2639,7 +2598,7 @@ def x_solve_quadratic__mutmut_63(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
@@ -2672,7 +2631,7 @@ def x_solve_quadratic__mutmut_63(row):
         x1 = (-b + sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_64(row):
+def x_solve_quadratic__mutmut_63(row):
 
     
     try:
@@ -2680,7 +2639,7 @@ def x_solve_quadratic__mutmut_64(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
@@ -2713,7 +2672,7 @@ def x_solve_quadratic__mutmut_64(row):
         x1 = (-b + sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_65(row):
+def x_solve_quadratic__mutmut_64(row):
 
     
     try:
@@ -2721,7 +2680,7 @@ def x_solve_quadratic__mutmut_65(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
@@ -2754,7 +2713,7 @@ def x_solve_quadratic__mutmut_65(row):
         x1 = (-b + sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_66(row):
+def x_solve_quadratic__mutmut_65(row):
 
     
     try:
@@ -2762,7 +2721,7 @@ def x_solve_quadratic__mutmut_66(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
@@ -2795,7 +2754,7 @@ def x_solve_quadratic__mutmut_66(row):
         x1 = (-b + sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_67(row):
+def x_solve_quadratic__mutmut_66(row):
 
     
     try:
@@ -2803,7 +2762,7 @@ def x_solve_quadratic__mutmut_67(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
@@ -2836,7 +2795,7 @@ def x_solve_quadratic__mutmut_67(row):
         x1 = (-b + sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_68(row):
+def x_solve_quadratic__mutmut_67(row):
 
     
     try:
@@ -2844,7 +2803,7 @@ def x_solve_quadratic__mutmut_68(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
@@ -2877,7 +2836,7 @@ def x_solve_quadratic__mutmut_68(row):
         x1 = (-b + sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_69(row):
+def x_solve_quadratic__mutmut_68(row):
 
     
     try:
@@ -2885,7 +2844,7 @@ def x_solve_quadratic__mutmut_69(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
@@ -2918,7 +2877,7 @@ def x_solve_quadratic__mutmut_69(row):
         x1 = (-b + sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_70(row):
+def x_solve_quadratic__mutmut_69(row):
 
     
     try:
@@ -2926,7 +2885,7 @@ def x_solve_quadratic__mutmut_70(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
@@ -2959,7 +2918,7 @@ def x_solve_quadratic__mutmut_70(row):
         x1 = (-b + sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_71(row):
+def x_solve_quadratic__mutmut_70(row):
 
     
     try:
@@ -2967,7 +2926,7 @@ def x_solve_quadratic__mutmut_71(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
@@ -3000,7 +2959,7 @@ def x_solve_quadratic__mutmut_71(row):
         x1 = (-b + sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_72(row):
+def x_solve_quadratic__mutmut_71(row):
 
     
     try:
@@ -3008,7 +2967,7 @@ def x_solve_quadratic__mutmut_72(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
@@ -3041,7 +3000,7 @@ def x_solve_quadratic__mutmut_72(row):
         x1 = (-b + sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_73(row):
+def x_solve_quadratic__mutmut_72(row):
 
     
     try:
@@ -3049,7 +3008,7 @@ def x_solve_quadratic__mutmut_73(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
@@ -3082,7 +3041,7 @@ def x_solve_quadratic__mutmut_73(row):
         x1 = (-b + sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_74(row):
+def x_solve_quadratic__mutmut_73(row):
 
     
     try:
@@ -3090,7 +3049,7 @@ def x_solve_quadratic__mutmut_74(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
@@ -3123,7 +3082,7 @@ def x_solve_quadratic__mutmut_74(row):
         x1 = (-b + sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_75(row):
+def x_solve_quadratic__mutmut_74(row):
 
     
     try:
@@ -3131,7 +3090,7 @@ def x_solve_quadratic__mutmut_75(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
@@ -3164,7 +3123,7 @@ def x_solve_quadratic__mutmut_75(row):
         x1 = (-b + sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_76(row):
+def x_solve_quadratic__mutmut_75(row):
 
     
     try:
@@ -3172,7 +3131,7 @@ def x_solve_quadratic__mutmut_76(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
@@ -3205,7 +3164,7 @@ def x_solve_quadratic__mutmut_76(row):
         x1 = (-b + sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_77(row):
+def x_solve_quadratic__mutmut_76(row):
 
     
     try:
@@ -3213,7 +3172,7 @@ def x_solve_quadratic__mutmut_77(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
@@ -3246,7 +3205,7 @@ def x_solve_quadratic__mutmut_77(row):
         x1 = (-b + sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_78(row):
+def x_solve_quadratic__mutmut_77(row):
 
     
     try:
@@ -3254,7 +3213,7 @@ def x_solve_quadratic__mutmut_78(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
@@ -3287,7 +3246,7 @@ def x_solve_quadratic__mutmut_78(row):
         x1 = (-b + sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_79(row):
+def x_solve_quadratic__mutmut_78(row):
 
     
     try:
@@ -3295,7 +3254,7 @@ def x_solve_quadratic__mutmut_79(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
@@ -3328,7 +3287,7 @@ def x_solve_quadratic__mutmut_79(row):
         x1 = (-b + sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_80(row):
+def x_solve_quadratic__mutmut_79(row):
 
     
     try:
@@ -3336,7 +3295,7 @@ def x_solve_quadratic__mutmut_80(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
@@ -3369,7 +3328,7 @@ def x_solve_quadratic__mutmut_80(row):
         x1 = (-b + sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_81(row):
+def x_solve_quadratic__mutmut_80(row):
 
     
     try:
@@ -3377,7 +3336,7 @@ def x_solve_quadratic__mutmut_81(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
@@ -3410,7 +3369,7 @@ def x_solve_quadratic__mutmut_81(row):
         x1 = (-b + sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_82(row):
+def x_solve_quadratic__mutmut_81(row):
 
     
     try:
@@ -3418,7 +3377,7 @@ def x_solve_quadratic__mutmut_82(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
@@ -3451,7 +3410,7 @@ def x_solve_quadratic__mutmut_82(row):
         x1 = (-b + sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_83(row):
+def x_solve_quadratic__mutmut_82(row):
 
     
     try:
@@ -3459,7 +3418,7 @@ def x_solve_quadratic__mutmut_83(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
@@ -3492,7 +3451,7 @@ def x_solve_quadratic__mutmut_83(row):
         x1 = (-b + sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_84(row):
+def x_solve_quadratic__mutmut_83(row):
 
     
     try:
@@ -3500,7 +3459,7 @@ def x_solve_quadratic__mutmut_84(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
@@ -3533,7 +3492,7 @@ def x_solve_quadratic__mutmut_84(row):
         x1 = (-b + sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_85(row):
+def x_solve_quadratic__mutmut_84(row):
 
     
     try:
@@ -3541,7 +3500,7 @@ def x_solve_quadratic__mutmut_85(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
@@ -3574,7 +3533,7 @@ def x_solve_quadratic__mutmut_85(row):
         x1 = (-b + sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_86(row):
+def x_solve_quadratic__mutmut_85(row):
 
     
     try:
@@ -3582,7 +3541,7 @@ def x_solve_quadratic__mutmut_86(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
@@ -3615,7 +3574,7 @@ def x_solve_quadratic__mutmut_86(row):
         x1 = (-b + sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_87(row):
+def x_solve_quadratic__mutmut_86(row):
 
     
     try:
@@ -3623,7 +3582,7 @@ def x_solve_quadratic__mutmut_87(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
@@ -3656,7 +3615,7 @@ def x_solve_quadratic__mutmut_87(row):
         x1 = (-b + sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_88(row):
+def x_solve_quadratic__mutmut_87(row):
 
     
     try:
@@ -3664,7 +3623,7 @@ def x_solve_quadratic__mutmut_88(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
@@ -3697,7 +3656,7 @@ def x_solve_quadratic__mutmut_88(row):
         x1 = None
         x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_89(row):
+def x_solve_quadratic__mutmut_88(row):
 
     
     try:
@@ -3705,7 +3664,7 @@ def x_solve_quadratic__mutmut_89(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
@@ -3738,7 +3697,7 @@ def x_solve_quadratic__mutmut_89(row):
         x1 = (-b + sqrt_d) * (2 * a)
         x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_90(row):
+def x_solve_quadratic__mutmut_89(row):
 
     
     try:
@@ -3746,7 +3705,7 @@ def x_solve_quadratic__mutmut_90(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
@@ -3779,7 +3738,7 @@ def x_solve_quadratic__mutmut_90(row):
         x1 = (-b - sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_91(row):
+def x_solve_quadratic__mutmut_90(row):
 
     
     try:
@@ -3787,7 +3746,7 @@ def x_solve_quadratic__mutmut_91(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
@@ -3820,7 +3779,7 @@ def x_solve_quadratic__mutmut_91(row):
         x1 = (+b + sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_92(row):
+def x_solve_quadratic__mutmut_91(row):
 
     
     try:
@@ -3828,7 +3787,7 @@ def x_solve_quadratic__mutmut_92(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
@@ -3861,7 +3820,7 @@ def x_solve_quadratic__mutmut_92(row):
         x1 = (-b + sqrt_d) / (2 / a)
         x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_93(row):
+def x_solve_quadratic__mutmut_92(row):
 
     
     try:
@@ -3869,7 +3828,7 @@ def x_solve_quadratic__mutmut_93(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
@@ -3902,7 +3861,7 @@ def x_solve_quadratic__mutmut_93(row):
         x1 = (-b + sqrt_d) / (3 * a)
         x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_94(row):
+def x_solve_quadratic__mutmut_93(row):
 
     
     try:
@@ -3910,7 +3869,7 @@ def x_solve_quadratic__mutmut_94(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
@@ -3943,7 +3902,7 @@ def x_solve_quadratic__mutmut_94(row):
         x1 = (-b + sqrt_d) / (2 * a)
         x2 = None
         return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_95(row):
+def x_solve_quadratic__mutmut_94(row):
 
     
     try:
@@ -3951,7 +3910,7 @@ def x_solve_quadratic__mutmut_95(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
@@ -3984,7 +3943,7 @@ def x_solve_quadratic__mutmut_95(row):
         x1 = (-b + sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) * (2 * a)
         return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_96(row):
+def x_solve_quadratic__mutmut_95(row):
 
     
     try:
@@ -3992,7 +3951,7 @@ def x_solve_quadratic__mutmut_96(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
@@ -4025,7 +3984,7 @@ def x_solve_quadratic__mutmut_96(row):
         x1 = (-b + sqrt_d) / (2 * a)
         x2 = (-b + sqrt_d) / (2 * a)
         return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_97(row):
+def x_solve_quadratic__mutmut_96(row):
 
     
     try:
@@ -4033,7 +3992,7 @@ def x_solve_quadratic__mutmut_97(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
@@ -4066,7 +4025,7 @@ def x_solve_quadratic__mutmut_97(row):
         x1 = (-b + sqrt_d) / (2 * a)
         x2 = (+b - sqrt_d) / (2 * a)
         return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_98(row):
+def x_solve_quadratic__mutmut_97(row):
 
     
     try:
@@ -4074,7 +4033,7 @@ def x_solve_quadratic__mutmut_98(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
@@ -4107,7 +4066,7 @@ def x_solve_quadratic__mutmut_98(row):
         x1 = (-b + sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) / (2 / a)
         return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_99(row):
+def x_solve_quadratic__mutmut_98(row):
 
     
     try:
@@ -4115,7 +4074,7 @@ def x_solve_quadratic__mutmut_99(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
@@ -4148,7 +4107,7 @@ def x_solve_quadratic__mutmut_99(row):
         x1 = (-b + sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) / (3 * a)
         return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_100(row):
+def x_solve_quadratic__mutmut_99(row):
 
     
     try:
@@ -4156,7 +4115,7 @@ def x_solve_quadratic__mutmut_100(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
@@ -4189,7 +4148,7 @@ def x_solve_quadratic__mutmut_100(row):
         x1 = (-b + sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) / (2 * a)
         return "XXquadratic_two_complexXX", [x1, x2]
-def x_solve_quadratic__mutmut_101(row):
+def x_solve_quadratic__mutmut_100(row):
 
     
     try:
@@ -4197,7 +4156,7 @@ def x_solve_quadratic__mutmut_101(row):
         b = float(row[1])
         c = float(row[2])
     except (ValueError, TypeError):
-        return "XXincorrect_typeXX", ["N/A", "N/A"]
+        return "incorrect_type", ["N/A", "N/A"]
 
     
     if a == 0.0:
@@ -4331,8 +4290,7 @@ x_solve_quadratic__mutmut_mutants : ClassVar[MutantDict] = {
     'x_solve_quadratic__mutmut_97': x_solve_quadratic__mutmut_97, 
     'x_solve_quadratic__mutmut_98': x_solve_quadratic__mutmut_98, 
     'x_solve_quadratic__mutmut_99': x_solve_quadratic__mutmut_99, 
-    'x_solve_quadratic__mutmut_100': x_solve_quadratic__mutmut_100, 
-    'x_solve_quadratic__mutmut_101': x_solve_quadratic__mutmut_101
+    'x_solve_quadratic__mutmut_100': x_solve_quadratic__mutmut_100
 }
 
 def solve_quadratic(*args, **kwargs):
