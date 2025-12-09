@@ -42,25 +42,25 @@ It is recommended to clear cache everytime to ensure accurate results:
 
 ```bash
 # Clear mutmut cache
-rm -rf .mutmut-cache
+rm -rf mutants/__pycache__ mutants/.mutmut-cache mutants/mutmut-stats.json
 ```
 
 ### Step 0: Configure pytest.ini
 
-Before running mutmut, you need to configure `pytest.ini` to specify which test file to run. Open `pytest.ini` and comment/uncomment the appropriate `addopts` line depending on which tests you want to run:
+Before running mutmut, you need to configure `pytest.ini` to specify which test file to run. Open `pytest.ini` and comment/uncomment the appropriate `addopts` line depending on which tests you want to run, in the below example mutmut is configured to run pairwise test suite:
 
 ```ini
 # to run pairwise mutation tests only
-addopts =  --ignore=tests/test_allcombination.py --ignore=tests/test_base.py --ignore=tests/test_mutation_metamorphic.py --ignore=tests/test_metamorphic_relation.py
+addopts =  --ignore=tests/test_allcombination.py --ignore=tests/test_base.py --ignore=tests/test_metamorphic.py  --ignore=tests/test_metamorphic_relation.py
 
 # to run allcombination mutation tests only
-# addopts =  --ignore=tests/test_pairwise.py --ignore=tests/test_base.py --ignore=tests/test_mutation_metamorphic.py --ignore=tests/test_metamorphic_relation.py
+# addopts =  --ignore=tests/test_pairwise.py --ignore=tests/test_Base.py --ignore=tests/test_metamorphic.py --ignore=tests/test_metamorphic_relation.py
 
 # to run base tests only
-# addopts =  --ignore=tests/test_pairwise.py --ignore=tests/test_allcombination.py --ignore=tests/test_mutation_metamorphic.py --ignore=tests/test_metamorphic_relation.py
+# addopts =  --ignore=tests/test_pairwise.py --ignore=tests/test_allcombination.py  --ignore=tests/test_metamorphic.py --ignore=tests/test_metamorphic_relation.py
 
 # to run metamorphic mutation tests only
-# addopts =  --ignore=tests/test_pairwise.py --ignore=tests/test_allcombination.py --ignore=tests/test_base.py --ignore=tests/test_metamorphic_relation.py
+#addopts =  --ignore=tests/test_pairwise.py --ignore=tests/test_allcombination.py --ignore=tests/test_base.py --ignore=tests/test_metamorphic_relation.py
 ```
 
 **Important**: Only ONE `addopts` line should be uncommented at a time.

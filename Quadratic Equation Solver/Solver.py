@@ -12,6 +12,7 @@ Returns case which can be any of the below
     - 'no_solution' 
     - 'infinite_solutions' 
     - 'incorrect_type' for error in the inputs
+    - 'overflow' for overflow errors
 
 Returns the roots which can be of type complex, float, or "N/A". 
 """
@@ -25,18 +26,21 @@ def solve_quadratic(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
     if disc > 0:
         
         sqrt_d = math.sqrt(disc)

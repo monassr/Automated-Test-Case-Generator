@@ -115,7 +115,7 @@ def assert_pairwise_test_case(row):
                         f"Root mismatch for ({a_str}, {b_str}, {c_str}), root {i}: expected {expected_str}, got {actual_str}"  
                           
     
-    elif expected_case in ["no_solution", "infinite_solutions", "incorrect_type"]:
+    elif expected_case in ["no_solution", "infinite_solutions", "incorrect_type", "overflow"]:
         assert actual_roots == ["N/A", "N/A"], \
             f"Expected ['N/A', 'N/A'] for {expected_case}, got {actual_roots}"
 

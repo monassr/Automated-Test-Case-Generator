@@ -9,9 +9,10 @@ Returns case which can be any of the below
     - 'quadratic_one_real' 
     - 'quadratic_two_complex'
     - 'linear' 
-    - 'no_solution temp' 
+    - 'no_solution' 
     - 'infinite_solutions' 
     - 'incorrect_type' for error in the inputs
+    - 'overflow' for overflow errors
 
 Returns the roots which can be of type complex, float, or "N/A". 
 """
@@ -57,18 +58,21 @@ def x_solve_quadratic__mutmut_orig(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
     if disc > 0:
         
         sqrt_d = math.sqrt(disc)
@@ -95,18 +99,21 @@ def x_solve_quadratic__mutmut_1(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
     if disc > 0:
         
         sqrt_d = math.sqrt(disc)
@@ -133,18 +140,21 @@ def x_solve_quadratic__mutmut_2(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
     if disc > 0:
         
         sqrt_d = math.sqrt(disc)
@@ -171,18 +181,21 @@ def x_solve_quadratic__mutmut_3(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
     if disc > 0:
         
         sqrt_d = math.sqrt(disc)
@@ -209,18 +222,21 @@ def x_solve_quadratic__mutmut_4(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
     if disc > 0:
         
         sqrt_d = math.sqrt(disc)
@@ -247,18 +263,21 @@ def x_solve_quadratic__mutmut_5(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
     if disc > 0:
         
         sqrt_d = math.sqrt(disc)
@@ -285,18 +304,21 @@ def x_solve_quadratic__mutmut_6(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
     if disc > 0:
         
         sqrt_d = math.sqrt(disc)
@@ -323,18 +345,21 @@ def x_solve_quadratic__mutmut_7(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
     if disc > 0:
         
         sqrt_d = math.sqrt(disc)
@@ -361,18 +386,21 @@ def x_solve_quadratic__mutmut_8(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
     if disc > 0:
         
         sqrt_d = math.sqrt(disc)
@@ -399,18 +427,21 @@ def x_solve_quadratic__mutmut_9(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
     if disc > 0:
         
         sqrt_d = math.sqrt(disc)
@@ -437,18 +468,21 @@ def x_solve_quadratic__mutmut_10(row):
     except (ValueError, TypeError):
         return "XXincorrect_typeXX", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
     if disc > 0:
         
         sqrt_d = math.sqrt(disc)
@@ -475,18 +509,21 @@ def x_solve_quadratic__mutmut_11(row):
     except (ValueError, TypeError):
         return "INCORRECT_TYPE", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
     if disc > 0:
         
         sqrt_d = math.sqrt(disc)
@@ -513,18 +550,21 @@ def x_solve_quadratic__mutmut_12(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["XXN/AXX", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
     if disc > 0:
         
         sqrt_d = math.sqrt(disc)
@@ -551,18 +591,21 @@ def x_solve_quadratic__mutmut_13(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["n/a", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
     if disc > 0:
         
         sqrt_d = math.sqrt(disc)
@@ -589,18 +632,21 @@ def x_solve_quadratic__mutmut_14(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "XXN/AXX"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
     if disc > 0:
         
         sqrt_d = math.sqrt(disc)
@@ -627,18 +673,21 @@ def x_solve_quadratic__mutmut_15(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "n/a"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
     if disc > 0:
         
         sqrt_d = math.sqrt(disc)
@@ -665,18 +714,21 @@ def x_solve_quadratic__mutmut_16(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a != 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
     if disc > 0:
         
         sqrt_d = math.sqrt(disc)
@@ -703,18 +755,21 @@ def x_solve_quadratic__mutmut_17(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 1.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
     if disc > 0:
         
         sqrt_d = math.sqrt(disc)
@@ -741,18 +796,21 @@ def x_solve_quadratic__mutmut_18(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b != 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
     if disc > 0:
         
         sqrt_d = math.sqrt(disc)
@@ -779,18 +837,21 @@ def x_solve_quadratic__mutmut_19(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 1.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
     if disc > 0:
         
         sqrt_d = math.sqrt(disc)
@@ -817,18 +878,21 @@ def x_solve_quadratic__mutmut_20(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c != 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
     if disc > 0:
         
         sqrt_d = math.sqrt(disc)
@@ -855,18 +919,21 @@ def x_solve_quadratic__mutmut_21(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 1.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
     if disc > 0:
         
         sqrt_d = math.sqrt(disc)
@@ -893,18 +960,21 @@ def x_solve_quadratic__mutmut_22(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "XXinfinite_solutionsXX", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
     if disc > 0:
         
         sqrt_d = math.sqrt(disc)
@@ -931,18 +1001,21 @@ def x_solve_quadratic__mutmut_23(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "INFINITE_SOLUTIONS", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
     if disc > 0:
         
         sqrt_d = math.sqrt(disc)
@@ -969,18 +1042,21 @@ def x_solve_quadratic__mutmut_24(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["XXN/AXX", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
     if disc > 0:
         
         sqrt_d = math.sqrt(disc)
@@ -1007,18 +1083,21 @@ def x_solve_quadratic__mutmut_25(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["n/a", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
     if disc > 0:
         
         sqrt_d = math.sqrt(disc)
@@ -1045,18 +1124,21 @@ def x_solve_quadratic__mutmut_26(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "XXN/AXX"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
     if disc > 0:
         
         sqrt_d = math.sqrt(disc)
@@ -1083,18 +1165,21 @@ def x_solve_quadratic__mutmut_27(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "n/a"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
     if disc > 0:
         
         sqrt_d = math.sqrt(disc)
@@ -1121,18 +1206,21 @@ def x_solve_quadratic__mutmut_28(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "XXno_solutionXX", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
     if disc > 0:
         
         sqrt_d = math.sqrt(disc)
@@ -1159,18 +1247,21 @@ def x_solve_quadratic__mutmut_29(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "NO_SOLUTION", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
     if disc > 0:
         
         sqrt_d = math.sqrt(disc)
@@ -1197,18 +1288,21 @@ def x_solve_quadratic__mutmut_30(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["XXN/AXX", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
     if disc > 0:
         
         sqrt_d = math.sqrt(disc)
@@ -1235,18 +1329,21 @@ def x_solve_quadratic__mutmut_31(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["n/a", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
     if disc > 0:
         
         sqrt_d = math.sqrt(disc)
@@ -1273,18 +1370,21 @@ def x_solve_quadratic__mutmut_32(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "XXN/AXX"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
     if disc > 0:
         
         sqrt_d = math.sqrt(disc)
@@ -1311,18 +1411,21 @@ def x_solve_quadratic__mutmut_33(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "n/a"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
     if disc > 0:
         
         sqrt_d = math.sqrt(disc)
@@ -1349,18 +1452,21 @@ def x_solve_quadratic__mutmut_34(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = None
         return "linear", [root, "N/A"]
 
     disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
     if disc > 0:
         
         sqrt_d = math.sqrt(disc)
@@ -1387,18 +1493,21 @@ def x_solve_quadratic__mutmut_35(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = -c * b
         return "linear", [root, "N/A"]
 
     disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
     if disc > 0:
         
         sqrt_d = math.sqrt(disc)
@@ -1425,18 +1534,21 @@ def x_solve_quadratic__mutmut_36(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = +c / b
         return "linear", [root, "N/A"]
 
     disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
     if disc > 0:
         
         sqrt_d = math.sqrt(disc)
@@ -1463,18 +1575,21 @@ def x_solve_quadratic__mutmut_37(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "XXlinearXX", [root, "N/A"]
 
     disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
     if disc > 0:
         
         sqrt_d = math.sqrt(disc)
@@ -1501,18 +1616,21 @@ def x_solve_quadratic__mutmut_38(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "LINEAR", [root, "N/A"]
 
     disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
     if disc > 0:
         
         sqrt_d = math.sqrt(disc)
@@ -1539,18 +1657,21 @@ def x_solve_quadratic__mutmut_39(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "XXN/AXX"]
 
     disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
     if disc > 0:
         
         sqrt_d = math.sqrt(disc)
@@ -1577,18 +1698,21 @@ def x_solve_quadratic__mutmut_40(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "n/a"]
 
     disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
     if disc > 0:
         
         sqrt_d = math.sqrt(disc)
@@ -1615,18 +1739,21 @@ def x_solve_quadratic__mutmut_41(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = None
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
     if disc > 0:
         
         sqrt_d = math.sqrt(disc)
@@ -1653,18 +1780,21 @@ def x_solve_quadratic__mutmut_42(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = b * b + 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
     if disc > 0:
         
         sqrt_d = math.sqrt(disc)
@@ -1691,18 +1821,21 @@ def x_solve_quadratic__mutmut_43(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = b / b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
     if disc > 0:
         
         sqrt_d = math.sqrt(disc)
@@ -1729,18 +1862,21 @@ def x_solve_quadratic__mutmut_44(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = b * b - 4 * a / c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
     if disc > 0:
         
         sqrt_d = math.sqrt(disc)
@@ -1767,18 +1903,21 @@ def x_solve_quadratic__mutmut_45(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = b * b - 4 / a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
     if disc > 0:
         
         sqrt_d = math.sqrt(disc)
@@ -1805,18 +1944,21 @@ def x_solve_quadratic__mutmut_46(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = b * b - 5 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
     if disc > 0:
         
         sqrt_d = math.sqrt(disc)
@@ -1843,19 +1985,22 @@ def x_solve_quadratic__mutmut_47(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = b * b - 4 * a * c
-    if disc >= 0:
+    if math.isinf(disc) and math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
+    if disc > 0:
         
         sqrt_d = math.sqrt(disc)
         x1 = (-b + sqrt_d) / (2 * a)
@@ -1881,19 +2026,22 @@ def x_solve_quadratic__mutmut_48(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = b * b - 4 * a * c
-    if disc > 1:
+    if math.isinf(None) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
+    if disc > 0:
         
         sqrt_d = math.sqrt(disc)
         x1 = (-b + sqrt_d) / (2 * a)
@@ -1919,21 +2067,24 @@ def x_solve_quadratic__mutmut_49(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(None):
+        return "overflow", ["N/A", "N/A"]
+
     if disc > 0:
         
-        sqrt_d = None
+        sqrt_d = math.sqrt(disc)
         x1 = (-b + sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_real", [x1, x2]
@@ -1957,21 +2108,24 @@ def x_solve_quadratic__mutmut_50(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "XXoverflowXX", ["N/A", "N/A"]
+
     if disc > 0:
         
-        sqrt_d = math.sqrt(None)
+        sqrt_d = math.sqrt(disc)
         x1 = (-b + sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_real", [x1, x2]
@@ -1995,22 +2149,25 @@ def x_solve_quadratic__mutmut_51(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "OVERFLOW", ["N/A", "N/A"]
+
     if disc > 0:
         
         sqrt_d = math.sqrt(disc)
-        x1 = None
+        x1 = (-b + sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_real", [x1, x2]
     elif disc == 0:
@@ -2033,22 +2190,25 @@ def x_solve_quadratic__mutmut_52(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["XXN/AXX", "N/A"]
+
     if disc > 0:
         
         sqrt_d = math.sqrt(disc)
-        x1 = (-b + sqrt_d) * (2 * a)
+        x1 = (-b + sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_real", [x1, x2]
     elif disc == 0:
@@ -2071,22 +2231,25 @@ def x_solve_quadratic__mutmut_53(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["n/a", "N/A"]
+
     if disc > 0:
         
         sqrt_d = math.sqrt(disc)
-        x1 = (-b - sqrt_d) / (2 * a)
+        x1 = (-b + sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_real", [x1, x2]
     elif disc == 0:
@@ -2109,22 +2272,25 @@ def x_solve_quadratic__mutmut_54(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "XXN/AXX"]
+
     if disc > 0:
         
         sqrt_d = math.sqrt(disc)
-        x1 = (+b + sqrt_d) / (2 * a)
+        x1 = (-b + sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_real", [x1, x2]
     elif disc == 0:
@@ -2147,22 +2313,25 @@ def x_solve_quadratic__mutmut_55(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "n/a"]
+
     if disc > 0:
         
         sqrt_d = math.sqrt(disc)
-        x1 = (-b + sqrt_d) / (2 / a)
+        x1 = (-b + sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_real", [x1, x2]
     elif disc == 0:
@@ -2185,22 +2354,25 @@ def x_solve_quadratic__mutmut_56(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = b * b - 4 * a * c
-    if disc > 0:
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
+    if disc >= 0:
         
         sqrt_d = math.sqrt(disc)
-        x1 = (-b + sqrt_d) / (3 * a)
+        x1 = (-b + sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_real", [x1, x2]
     elif disc == 0:
@@ -2223,23 +2395,26 @@ def x_solve_quadratic__mutmut_57(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = b * b - 4 * a * c
-    if disc > 0:
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
+    if disc > 1:
         
         sqrt_d = math.sqrt(disc)
         x1 = (-b + sqrt_d) / (2 * a)
-        x2 = None
+        x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_real", [x1, x2]
     elif disc == 0:
         
@@ -2261,23 +2436,26 @@ def x_solve_quadratic__mutmut_58(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
     if disc > 0:
         
-        sqrt_d = math.sqrt(disc)
+        sqrt_d = None
         x1 = (-b + sqrt_d) / (2 * a)
-        x2 = (-b - sqrt_d) * (2 * a)
+        x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_real", [x1, x2]
     elif disc == 0:
         
@@ -2299,23 +2477,26 @@ def x_solve_quadratic__mutmut_59(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
     if disc > 0:
         
-        sqrt_d = math.sqrt(disc)
+        sqrt_d = math.sqrt(None)
         x1 = (-b + sqrt_d) / (2 * a)
-        x2 = (-b + sqrt_d) / (2 * a)
+        x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_real", [x1, x2]
     elif disc == 0:
         
@@ -2337,23 +2518,26 @@ def x_solve_quadratic__mutmut_60(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
     if disc > 0:
         
         sqrt_d = math.sqrt(disc)
-        x1 = (-b + sqrt_d) / (2 * a)
-        x2 = (+b - sqrt_d) / (2 * a)
+        x1 = None
+        x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_real", [x1, x2]
     elif disc == 0:
         
@@ -2375,23 +2559,26 @@ def x_solve_quadratic__mutmut_61(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
     if disc > 0:
         
         sqrt_d = math.sqrt(disc)
-        x1 = (-b + sqrt_d) / (2 * a)
-        x2 = (-b - sqrt_d) / (2 / a)
+        x1 = (-b + sqrt_d) * (2 * a)
+        x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_real", [x1, x2]
     elif disc == 0:
         
@@ -2413,23 +2600,26 @@ def x_solve_quadratic__mutmut_62(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
     if disc > 0:
         
         sqrt_d = math.sqrt(disc)
-        x1 = (-b + sqrt_d) / (2 * a)
-        x2 = (-b - sqrt_d) / (3 * a)
+        x1 = (-b - sqrt_d) / (2 * a)
+        x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_real", [x1, x2]
     elif disc == 0:
         
@@ -2451,24 +2641,27 @@ def x_solve_quadratic__mutmut_63(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
     if disc > 0:
         
         sqrt_d = math.sqrt(disc)
-        x1 = (-b + sqrt_d) / (2 * a)
+        x1 = (+b + sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) / (2 * a)
-        return "XXquadratic_two_realXX", [x1, x2]
+        return "quadratic_two_real", [x1, x2]
     elif disc == 0:
         
         x = -b / (2 * a)
@@ -2489,24 +2682,27 @@ def x_solve_quadratic__mutmut_64(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
     if disc > 0:
         
         sqrt_d = math.sqrt(disc)
-        x1 = (-b + sqrt_d) / (2 * a)
+        x1 = (-b + sqrt_d) / (2 / a)
         x2 = (-b - sqrt_d) / (2 * a)
-        return "QUADRATIC_TWO_REAL", [x1, x2]
+        return "quadratic_two_real", [x1, x2]
     elif disc == 0:
         
         x = -b / (2 * a)
@@ -2527,25 +2723,28 @@ def x_solve_quadratic__mutmut_65(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
     if disc > 0:
         
         sqrt_d = math.sqrt(disc)
-        x1 = (-b + sqrt_d) / (2 * a)
+        x1 = (-b + sqrt_d) / (3 * a)
         x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_real", [x1, x2]
-    elif disc != 0:
+    elif disc == 0:
         
         x = -b / (2 * a)
         return "quadratic_one_real", [x, "N/A"]
@@ -2565,25 +2764,28 @@ def x_solve_quadratic__mutmut_66(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
     if disc > 0:
         
         sqrt_d = math.sqrt(disc)
         x1 = (-b + sqrt_d) / (2 * a)
-        x2 = (-b - sqrt_d) / (2 * a)
+        x2 = None
         return "quadratic_two_real", [x1, x2]
-    elif disc == 1:
+    elif disc == 0:
         
         x = -b / (2 * a)
         return "quadratic_one_real", [x, "N/A"]
@@ -2603,27 +2805,30 @@ def x_solve_quadratic__mutmut_67(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
     if disc > 0:
         
         sqrt_d = math.sqrt(disc)
         x1 = (-b + sqrt_d) / (2 * a)
-        x2 = (-b - sqrt_d) / (2 * a)
+        x2 = (-b - sqrt_d) * (2 * a)
         return "quadratic_two_real", [x1, x2]
     elif disc == 0:
         
-        x = None
+        x = -b / (2 * a)
         return "quadratic_one_real", [x, "N/A"]
     else:
         
@@ -2641,27 +2846,30 @@ def x_solve_quadratic__mutmut_68(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
     if disc > 0:
         
         sqrt_d = math.sqrt(disc)
         x1 = (-b + sqrt_d) / (2 * a)
-        x2 = (-b - sqrt_d) / (2 * a)
+        x2 = (-b + sqrt_d) / (2 * a)
         return "quadratic_two_real", [x1, x2]
     elif disc == 0:
         
-        x = -b * (2 * a)
+        x = -b / (2 * a)
         return "quadratic_one_real", [x, "N/A"]
     else:
         
@@ -2679,27 +2887,30 @@ def x_solve_quadratic__mutmut_69(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
     if disc > 0:
         
         sqrt_d = math.sqrt(disc)
         x1 = (-b + sqrt_d) / (2 * a)
-        x2 = (-b - sqrt_d) / (2 * a)
+        x2 = (+b - sqrt_d) / (2 * a)
         return "quadratic_two_real", [x1, x2]
     elif disc == 0:
         
-        x = +b / (2 * a)
+        x = -b / (2 * a)
         return "quadratic_one_real", [x, "N/A"]
     else:
         
@@ -2717,27 +2928,30 @@ def x_solve_quadratic__mutmut_70(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
     if disc > 0:
         
         sqrt_d = math.sqrt(disc)
         x1 = (-b + sqrt_d) / (2 * a)
-        x2 = (-b - sqrt_d) / (2 * a)
+        x2 = (-b - sqrt_d) / (2 / a)
         return "quadratic_two_real", [x1, x2]
     elif disc == 0:
         
-        x = -b / (2 / a)
+        x = -b / (2 * a)
         return "quadratic_one_real", [x, "N/A"]
     else:
         
@@ -2755,27 +2969,30 @@ def x_solve_quadratic__mutmut_71(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
     if disc > 0:
         
         sqrt_d = math.sqrt(disc)
         x1 = (-b + sqrt_d) / (2 * a)
-        x2 = (-b - sqrt_d) / (2 * a)
+        x2 = (-b - sqrt_d) / (3 * a)
         return "quadratic_two_real", [x1, x2]
     elif disc == 0:
         
-        x = -b / (3 * a)
+        x = -b / (2 * a)
         return "quadratic_one_real", [x, "N/A"]
     else:
         
@@ -2793,28 +3010,31 @@ def x_solve_quadratic__mutmut_72(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
     if disc > 0:
         
         sqrt_d = math.sqrt(disc)
         x1 = (-b + sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) / (2 * a)
-        return "quadratic_two_real", [x1, x2]
+        return "XXquadratic_two_realXX", [x1, x2]
     elif disc == 0:
         
         x = -b / (2 * a)
-        return "XXquadratic_one_realXX", [x, "N/A"]
+        return "quadratic_one_real", [x, "N/A"]
     else:
         
         sqrt_d = cmath.sqrt(disc)
@@ -2831,28 +3051,31 @@ def x_solve_quadratic__mutmut_73(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
     if disc > 0:
         
         sqrt_d = math.sqrt(disc)
         x1 = (-b + sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) / (2 * a)
-        return "quadratic_two_real", [x1, x2]
+        return "QUADRATIC_TWO_REAL", [x1, x2]
     elif disc == 0:
         
         x = -b / (2 * a)
-        return "QUADRATIC_ONE_REAL", [x, "N/A"]
+        return "quadratic_one_real", [x, "N/A"]
     else:
         
         sqrt_d = cmath.sqrt(disc)
@@ -2869,28 +3092,31 @@ def x_solve_quadratic__mutmut_74(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
     if disc > 0:
         
         sqrt_d = math.sqrt(disc)
         x1 = (-b + sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_real", [x1, x2]
-    elif disc == 0:
+    elif disc != 0:
         
         x = -b / (2 * a)
-        return "quadratic_one_real", [x, "XXN/AXX"]
+        return "quadratic_one_real", [x, "N/A"]
     else:
         
         sqrt_d = cmath.sqrt(disc)
@@ -2907,28 +3133,31 @@ def x_solve_quadratic__mutmut_75(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
     if disc > 0:
         
         sqrt_d = math.sqrt(disc)
         x1 = (-b + sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_real", [x1, x2]
-    elif disc == 0:
+    elif disc == 1:
         
         x = -b / (2 * a)
-        return "quadratic_one_real", [x, "n/a"]
+        return "quadratic_one_real", [x, "N/A"]
     else:
         
         sqrt_d = cmath.sqrt(disc)
@@ -2945,18 +3174,390 @@ def x_solve_quadratic__mutmut_76(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
+    if disc > 0:
+        
+        sqrt_d = math.sqrt(disc)
+        x1 = (-b + sqrt_d) / (2 * a)
+        x2 = (-b - sqrt_d) / (2 * a)
+        return "quadratic_two_real", [x1, x2]
+    elif disc == 0:
+        
+        x = None
+        return "quadratic_one_real", [x, "N/A"]
+    else:
+        
+        sqrt_d = cmath.sqrt(disc)
+        x1 = (-b + sqrt_d) / (2 * a)
+        x2 = (-b - sqrt_d) / (2 * a)
+        return "quadratic_two_complex", [x1, x2]
+def x_solve_quadratic__mutmut_77(row):
+
+    
+    try:
+        a = float(row[0])
+        b = float(row[1])
+        c = float(row[2])
+    except (ValueError, TypeError):
+        return "incorrect_type", ["N/A", "N/A"]
+
+    
+    if a == 0.0:
+        if b == 0.0:
+            if c == 0.0:
+                return "infinite_solutions", ["N/A", "N/A"]
+            else:
+                return "no_solution", ["N/A", "N/A"]
+        
+        root = -c / b
+        return "linear", [root, "N/A"]
+
+    disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
+    if disc > 0:
+        
+        sqrt_d = math.sqrt(disc)
+        x1 = (-b + sqrt_d) / (2 * a)
+        x2 = (-b - sqrt_d) / (2 * a)
+        return "quadratic_two_real", [x1, x2]
+    elif disc == 0:
+        
+        x = -b * (2 * a)
+        return "quadratic_one_real", [x, "N/A"]
+    else:
+        
+        sqrt_d = cmath.sqrt(disc)
+        x1 = (-b + sqrt_d) / (2 * a)
+        x2 = (-b - sqrt_d) / (2 * a)
+        return "quadratic_two_complex", [x1, x2]
+def x_solve_quadratic__mutmut_78(row):
+
+    
+    try:
+        a = float(row[0])
+        b = float(row[1])
+        c = float(row[2])
+    except (ValueError, TypeError):
+        return "incorrect_type", ["N/A", "N/A"]
+
+    
+    if a == 0.0:
+        if b == 0.0:
+            if c == 0.0:
+                return "infinite_solutions", ["N/A", "N/A"]
+            else:
+                return "no_solution", ["N/A", "N/A"]
+        
+        root = -c / b
+        return "linear", [root, "N/A"]
+
+    disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
+    if disc > 0:
+        
+        sqrt_d = math.sqrt(disc)
+        x1 = (-b + sqrt_d) / (2 * a)
+        x2 = (-b - sqrt_d) / (2 * a)
+        return "quadratic_two_real", [x1, x2]
+    elif disc == 0:
+        
+        x = +b / (2 * a)
+        return "quadratic_one_real", [x, "N/A"]
+    else:
+        
+        sqrt_d = cmath.sqrt(disc)
+        x1 = (-b + sqrt_d) / (2 * a)
+        x2 = (-b - sqrt_d) / (2 * a)
+        return "quadratic_two_complex", [x1, x2]
+def x_solve_quadratic__mutmut_79(row):
+
+    
+    try:
+        a = float(row[0])
+        b = float(row[1])
+        c = float(row[2])
+    except (ValueError, TypeError):
+        return "incorrect_type", ["N/A", "N/A"]
+
+    
+    if a == 0.0:
+        if b == 0.0:
+            if c == 0.0:
+                return "infinite_solutions", ["N/A", "N/A"]
+            else:
+                return "no_solution", ["N/A", "N/A"]
+        
+        root = -c / b
+        return "linear", [root, "N/A"]
+
+    disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
+    if disc > 0:
+        
+        sqrt_d = math.sqrt(disc)
+        x1 = (-b + sqrt_d) / (2 * a)
+        x2 = (-b - sqrt_d) / (2 * a)
+        return "quadratic_two_real", [x1, x2]
+    elif disc == 0:
+        
+        x = -b / (2 / a)
+        return "quadratic_one_real", [x, "N/A"]
+    else:
+        
+        sqrt_d = cmath.sqrt(disc)
+        x1 = (-b + sqrt_d) / (2 * a)
+        x2 = (-b - sqrt_d) / (2 * a)
+        return "quadratic_two_complex", [x1, x2]
+def x_solve_quadratic__mutmut_80(row):
+
+    
+    try:
+        a = float(row[0])
+        b = float(row[1])
+        c = float(row[2])
+    except (ValueError, TypeError):
+        return "incorrect_type", ["N/A", "N/A"]
+
+    
+    if a == 0.0:
+        if b == 0.0:
+            if c == 0.0:
+                return "infinite_solutions", ["N/A", "N/A"]
+            else:
+                return "no_solution", ["N/A", "N/A"]
+        
+        root = -c / b
+        return "linear", [root, "N/A"]
+
+    disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
+    if disc > 0:
+        
+        sqrt_d = math.sqrt(disc)
+        x1 = (-b + sqrt_d) / (2 * a)
+        x2 = (-b - sqrt_d) / (2 * a)
+        return "quadratic_two_real", [x1, x2]
+    elif disc == 0:
+        
+        x = -b / (3 * a)
+        return "quadratic_one_real", [x, "N/A"]
+    else:
+        
+        sqrt_d = cmath.sqrt(disc)
+        x1 = (-b + sqrt_d) / (2 * a)
+        x2 = (-b - sqrt_d) / (2 * a)
+        return "quadratic_two_complex", [x1, x2]
+def x_solve_quadratic__mutmut_81(row):
+
+    
+    try:
+        a = float(row[0])
+        b = float(row[1])
+        c = float(row[2])
+    except (ValueError, TypeError):
+        return "incorrect_type", ["N/A", "N/A"]
+
+    
+    if a == 0.0:
+        if b == 0.0:
+            if c == 0.0:
+                return "infinite_solutions", ["N/A", "N/A"]
+            else:
+                return "no_solution", ["N/A", "N/A"]
+        
+        root = -c / b
+        return "linear", [root, "N/A"]
+
+    disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
+    if disc > 0:
+        
+        sqrt_d = math.sqrt(disc)
+        x1 = (-b + sqrt_d) / (2 * a)
+        x2 = (-b - sqrt_d) / (2 * a)
+        return "quadratic_two_real", [x1, x2]
+    elif disc == 0:
+        
+        x = -b / (2 * a)
+        return "XXquadratic_one_realXX", [x, "N/A"]
+    else:
+        
+        sqrt_d = cmath.sqrt(disc)
+        x1 = (-b + sqrt_d) / (2 * a)
+        x2 = (-b - sqrt_d) / (2 * a)
+        return "quadratic_two_complex", [x1, x2]
+def x_solve_quadratic__mutmut_82(row):
+
+    
+    try:
+        a = float(row[0])
+        b = float(row[1])
+        c = float(row[2])
+    except (ValueError, TypeError):
+        return "incorrect_type", ["N/A", "N/A"]
+
+    
+    if a == 0.0:
+        if b == 0.0:
+            if c == 0.0:
+                return "infinite_solutions", ["N/A", "N/A"]
+            else:
+                return "no_solution", ["N/A", "N/A"]
+        
+        root = -c / b
+        return "linear", [root, "N/A"]
+
+    disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
+    if disc > 0:
+        
+        sqrt_d = math.sqrt(disc)
+        x1 = (-b + sqrt_d) / (2 * a)
+        x2 = (-b - sqrt_d) / (2 * a)
+        return "quadratic_two_real", [x1, x2]
+    elif disc == 0:
+        
+        x = -b / (2 * a)
+        return "QUADRATIC_ONE_REAL", [x, "N/A"]
+    else:
+        
+        sqrt_d = cmath.sqrt(disc)
+        x1 = (-b + sqrt_d) / (2 * a)
+        x2 = (-b - sqrt_d) / (2 * a)
+        return "quadratic_two_complex", [x1, x2]
+def x_solve_quadratic__mutmut_83(row):
+
+    
+    try:
+        a = float(row[0])
+        b = float(row[1])
+        c = float(row[2])
+    except (ValueError, TypeError):
+        return "incorrect_type", ["N/A", "N/A"]
+
+    
+    if a == 0.0:
+        if b == 0.0:
+            if c == 0.0:
+                return "infinite_solutions", ["N/A", "N/A"]
+            else:
+                return "no_solution", ["N/A", "N/A"]
+        
+        root = -c / b
+        return "linear", [root, "N/A"]
+
+    disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
+    if disc > 0:
+        
+        sqrt_d = math.sqrt(disc)
+        x1 = (-b + sqrt_d) / (2 * a)
+        x2 = (-b - sqrt_d) / (2 * a)
+        return "quadratic_two_real", [x1, x2]
+    elif disc == 0:
+        
+        x = -b / (2 * a)
+        return "quadratic_one_real", [x, "XXN/AXX"]
+    else:
+        
+        sqrt_d = cmath.sqrt(disc)
+        x1 = (-b + sqrt_d) / (2 * a)
+        x2 = (-b - sqrt_d) / (2 * a)
+        return "quadratic_two_complex", [x1, x2]
+def x_solve_quadratic__mutmut_84(row):
+
+    
+    try:
+        a = float(row[0])
+        b = float(row[1])
+        c = float(row[2])
+    except (ValueError, TypeError):
+        return "incorrect_type", ["N/A", "N/A"]
+
+    
+    if a == 0.0:
+        if b == 0.0:
+            if c == 0.0:
+                return "infinite_solutions", ["N/A", "N/A"]
+            else:
+                return "no_solution", ["N/A", "N/A"]
+        
+        root = -c / b
+        return "linear", [root, "N/A"]
+
+    disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
+    if disc > 0:
+        
+        sqrt_d = math.sqrt(disc)
+        x1 = (-b + sqrt_d) / (2 * a)
+        x2 = (-b - sqrt_d) / (2 * a)
+        return "quadratic_two_real", [x1, x2]
+    elif disc == 0:
+        
+        x = -b / (2 * a)
+        return "quadratic_one_real", [x, "n/a"]
+    else:
+        
+        sqrt_d = cmath.sqrt(disc)
+        x1 = (-b + sqrt_d) / (2 * a)
+        x2 = (-b - sqrt_d) / (2 * a)
+        return "quadratic_two_complex", [x1, x2]
+def x_solve_quadratic__mutmut_85(row):
+
+    
+    try:
+        a = float(row[0])
+        b = float(row[1])
+        c = float(row[2])
+    except (ValueError, TypeError):
+        return "incorrect_type", ["N/A", "N/A"]
+
+    
+    if a == 0.0:
+        if b == 0.0:
+            if c == 0.0:
+                return "infinite_solutions", ["N/A", "N/A"]
+            else:
+                return "no_solution", ["N/A", "N/A"]
+        
+        root = -c / b
+        return "linear", [root, "N/A"]
+
+    disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
     if disc > 0:
         
         sqrt_d = math.sqrt(disc)
@@ -2973,7 +3574,7 @@ def x_solve_quadratic__mutmut_76(row):
         x1 = (-b + sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_77(row):
+def x_solve_quadratic__mutmut_86(row):
 
     
     try:
@@ -2983,18 +3584,21 @@ def x_solve_quadratic__mutmut_77(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
     if disc > 0:
         
         sqrt_d = math.sqrt(disc)
@@ -3011,7 +3615,7 @@ def x_solve_quadratic__mutmut_77(row):
         x1 = (-b + sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_78(row):
+def x_solve_quadratic__mutmut_87(row):
 
     
     try:
@@ -3021,18 +3625,21 @@ def x_solve_quadratic__mutmut_78(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
     if disc > 0:
         
         sqrt_d = math.sqrt(disc)
@@ -3049,7 +3656,7 @@ def x_solve_quadratic__mutmut_78(row):
         x1 = None
         x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_79(row):
+def x_solve_quadratic__mutmut_88(row):
 
     
     try:
@@ -3059,18 +3666,21 @@ def x_solve_quadratic__mutmut_79(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
     if disc > 0:
         
         sqrt_d = math.sqrt(disc)
@@ -3087,7 +3697,7 @@ def x_solve_quadratic__mutmut_79(row):
         x1 = (-b + sqrt_d) * (2 * a)
         x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_80(row):
+def x_solve_quadratic__mutmut_89(row):
 
     
     try:
@@ -3097,18 +3707,21 @@ def x_solve_quadratic__mutmut_80(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
     if disc > 0:
         
         sqrt_d = math.sqrt(disc)
@@ -3125,7 +3738,7 @@ def x_solve_quadratic__mutmut_80(row):
         x1 = (-b - sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_81(row):
+def x_solve_quadratic__mutmut_90(row):
 
     
     try:
@@ -3135,18 +3748,21 @@ def x_solve_quadratic__mutmut_81(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
     if disc > 0:
         
         sqrt_d = math.sqrt(disc)
@@ -3163,7 +3779,7 @@ def x_solve_quadratic__mutmut_81(row):
         x1 = (+b + sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_82(row):
+def x_solve_quadratic__mutmut_91(row):
 
     
     try:
@@ -3173,18 +3789,21 @@ def x_solve_quadratic__mutmut_82(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
     if disc > 0:
         
         sqrt_d = math.sqrt(disc)
@@ -3201,7 +3820,7 @@ def x_solve_quadratic__mutmut_82(row):
         x1 = (-b + sqrt_d) / (2 / a)
         x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_83(row):
+def x_solve_quadratic__mutmut_92(row):
 
     
     try:
@@ -3211,18 +3830,21 @@ def x_solve_quadratic__mutmut_83(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
     if disc > 0:
         
         sqrt_d = math.sqrt(disc)
@@ -3239,7 +3861,7 @@ def x_solve_quadratic__mutmut_83(row):
         x1 = (-b + sqrt_d) / (3 * a)
         x2 = (-b - sqrt_d) / (2 * a)
         return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_84(row):
+def x_solve_quadratic__mutmut_93(row):
 
     
     try:
@@ -3249,18 +3871,21 @@ def x_solve_quadratic__mutmut_84(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
     if disc > 0:
         
         sqrt_d = math.sqrt(disc)
@@ -3277,7 +3902,7 @@ def x_solve_quadratic__mutmut_84(row):
         x1 = (-b + sqrt_d) / (2 * a)
         x2 = None
         return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_85(row):
+def x_solve_quadratic__mutmut_94(row):
 
     
     try:
@@ -3287,18 +3912,21 @@ def x_solve_quadratic__mutmut_85(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
     if disc > 0:
         
         sqrt_d = math.sqrt(disc)
@@ -3315,7 +3943,7 @@ def x_solve_quadratic__mutmut_85(row):
         x1 = (-b + sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) * (2 * a)
         return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_86(row):
+def x_solve_quadratic__mutmut_95(row):
 
     
     try:
@@ -3325,18 +3953,21 @@ def x_solve_quadratic__mutmut_86(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
     if disc > 0:
         
         sqrt_d = math.sqrt(disc)
@@ -3353,7 +3984,7 @@ def x_solve_quadratic__mutmut_86(row):
         x1 = (-b + sqrt_d) / (2 * a)
         x2 = (-b + sqrt_d) / (2 * a)
         return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_87(row):
+def x_solve_quadratic__mutmut_96(row):
 
     
     try:
@@ -3363,18 +3994,21 @@ def x_solve_quadratic__mutmut_87(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
     if disc > 0:
         
         sqrt_d = math.sqrt(disc)
@@ -3391,7 +4025,7 @@ def x_solve_quadratic__mutmut_87(row):
         x1 = (-b + sqrt_d) / (2 * a)
         x2 = (+b - sqrt_d) / (2 * a)
         return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_88(row):
+def x_solve_quadratic__mutmut_97(row):
 
     
     try:
@@ -3401,18 +4035,21 @@ def x_solve_quadratic__mutmut_88(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
     if disc > 0:
         
         sqrt_d = math.sqrt(disc)
@@ -3429,7 +4066,7 @@ def x_solve_quadratic__mutmut_88(row):
         x1 = (-b + sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) / (2 / a)
         return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_89(row):
+def x_solve_quadratic__mutmut_98(row):
 
     
     try:
@@ -3439,18 +4076,21 @@ def x_solve_quadratic__mutmut_89(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
     if disc > 0:
         
         sqrt_d = math.sqrt(disc)
@@ -3467,7 +4107,7 @@ def x_solve_quadratic__mutmut_89(row):
         x1 = (-b + sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) / (3 * a)
         return "quadratic_two_complex", [x1, x2]
-def x_solve_quadratic__mutmut_90(row):
+def x_solve_quadratic__mutmut_99(row):
 
     
     try:
@@ -3477,18 +4117,21 @@ def x_solve_quadratic__mutmut_90(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
     if disc > 0:
         
         sqrt_d = math.sqrt(disc)
@@ -3505,7 +4148,7 @@ def x_solve_quadratic__mutmut_90(row):
         x1 = (-b + sqrt_d) / (2 * a)
         x2 = (-b - sqrt_d) / (2 * a)
         return "XXquadratic_two_complexXX", [x1, x2]
-def x_solve_quadratic__mutmut_91(row):
+def x_solve_quadratic__mutmut_100(row):
 
     
     try:
@@ -3515,18 +4158,21 @@ def x_solve_quadratic__mutmut_91(row):
     except (ValueError, TypeError):
         return "incorrect_type", ["N/A", "N/A"]
 
-
+    
     if a == 0.0:
         if b == 0.0:
             if c == 0.0:
                 return "infinite_solutions", ["N/A", "N/A"]
             else:
                 return "no_solution", ["N/A", "N/A"]
-      
+        
         root = -c / b
         return "linear", [root, "N/A"]
 
     disc = b * b - 4 * a * c
+    if math.isinf(disc) or math.isnan(disc):
+        return "overflow", ["N/A", "N/A"]
+
     if disc > 0:
         
         sqrt_d = math.sqrt(disc)
@@ -3635,7 +4281,16 @@ x_solve_quadratic__mutmut_mutants : ClassVar[MutantDict] = {
     'x_solve_quadratic__mutmut_88': x_solve_quadratic__mutmut_88, 
     'x_solve_quadratic__mutmut_89': x_solve_quadratic__mutmut_89, 
     'x_solve_quadratic__mutmut_90': x_solve_quadratic__mutmut_90, 
-    'x_solve_quadratic__mutmut_91': x_solve_quadratic__mutmut_91
+    'x_solve_quadratic__mutmut_91': x_solve_quadratic__mutmut_91, 
+    'x_solve_quadratic__mutmut_92': x_solve_quadratic__mutmut_92, 
+    'x_solve_quadratic__mutmut_93': x_solve_quadratic__mutmut_93, 
+    'x_solve_quadratic__mutmut_94': x_solve_quadratic__mutmut_94, 
+    'x_solve_quadratic__mutmut_95': x_solve_quadratic__mutmut_95, 
+    'x_solve_quadratic__mutmut_96': x_solve_quadratic__mutmut_96, 
+    'x_solve_quadratic__mutmut_97': x_solve_quadratic__mutmut_97, 
+    'x_solve_quadratic__mutmut_98': x_solve_quadratic__mutmut_98, 
+    'x_solve_quadratic__mutmut_99': x_solve_quadratic__mutmut_99, 
+    'x_solve_quadratic__mutmut_100': x_solve_quadratic__mutmut_100
 }
 
 def solve_quadratic(*args, **kwargs):

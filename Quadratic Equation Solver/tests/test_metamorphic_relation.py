@@ -5,6 +5,17 @@ import pytest
 import math
 from pathlib import Path
 
+"""
+
+
+
+This test file is only used for testing metamorphic relations, please refer to test_metamorphic.py for structural and mutation testing.
+
+
+
+
+"""
+
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1]))
 
 from Solver import solve_quadratic
@@ -33,19 +44,6 @@ def load_test_set():
                 test_cases.append(row)
 
     return test_cases
-
-# def parse_root(root_str):
-
-#     if root_str == "N/A":
-#         return "N/A"
-#     try:
-#         return float(root_str)
-#     except ValueError:
-#         try:
-#             root_str = root_str.replace("(", "").replace(")", "")
-#             return complex(root_str)
-#         except ValueError:
-#             return "N/A"
 
 
 def normalize_zero(val):
@@ -222,7 +220,7 @@ def test_mr2_negate_b(row):
                 assert roots_equal(negated_root, expected_negated), \
                     f"MR2 failed: Root {i} should be {expected_negated} but got {negated_root}"
                     
-    elif original_case in ["no_solution", "infinite_solutions"]:
+    elif original_case in ["no_solution", "infinite_solutions", "overflow"]:
         assert negated_roots == ["N/A", "N/A"], \
             f"MR2 failed: Expected ['N/A', 'N/A'] for {original_case}, got {negated_roots}"
 
